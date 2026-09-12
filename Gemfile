@@ -68,3 +68,5 @@ gem "sassc-rails"
 group :production do
   gem 'pg'
 end
+
+gem "json", "<3.0"
