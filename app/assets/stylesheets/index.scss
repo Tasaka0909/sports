@@ -1,0 +1,69 @@
+/* 全体のコンテナ（カード全体の幅や中央寄せ） */
+.tweets-container {
+  width: 90%;
+  max-width: 480px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+/* セクション見出し（マイページ内の各エリア見出し） */
+h3 {
+  width: auto;
+  margin: 15px 0 10px 0;
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+}
+
+/* 個別のカード・投稿ブロック */
+.tweet {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  margin-top: 12px;
+  padding: 12px 16px;
+  background-color: #fafafa;
+}
+
+/* 上部緑ラインのアクセントをつける場合 */
+.tweet.with-accent {
+  border-top: 4px solid #165315;
+}
+
+/* コンテンツ表示エリア（左右配置） */
+.main-box {
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* 時間・投稿詳細の右寄せ設定 */
+.time {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+  color: #666666;
+}
+
+/* プログレスバー（画像2行目のメーター風要素） */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #eef0f2;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #81c784; /* 画像のような黄緑色 */
+  border-radius: 4px;
+}

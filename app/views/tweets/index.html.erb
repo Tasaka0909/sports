@@ -1,0 +1,58 @@
+<div class="top-page">
+
+  <!-- ヘッダー -->
+  <header class="top-header">
+    <div class="logo">
+      <span class="logo-icon">♿</span>
+      <span>運動サポート</span>
+    </div>
+  </header>
+
+  <!-- メインビジュアル -->
+  <section class="hero-section">
+
+    <!-- キャッチコピー -->
+    <div class="hero-text">
+      <h1>
+        今日も一歩、<br>
+        未来の自分へ！
+      </h1>
+
+      <p>
+        手軽な運動を、楽しく継続しよう！
+      </p>
+    </div>
+
+    <!-- 雲 -->
+    <div class="cloud cloud1">☁️</div>
+
+    <!-- 木 -->
+    <div class="tree tree1">🌳</div>
+    <div class="tree tree2">🌳</div>
+    <div class="tree tree3">🌳</div>
+    <div class="tree tree4">🌳</div>
+
+    <!-- 走っている女性 -->
+    <div class="runner">
+      <%= image_tag "runner_cropped.png", alt: "走っている女性" %>
+    </div>
+
+    <!-- 地面 -->
+    <div class="ground"></div>
+
+  </section>
+
+  <!-- ログイン・新規登録 -->
+  <div class="auth-buttons">
+
+    <%= link_to "ログイン",
+        new_user_session_path,
+        class: "login-btn" %>
+
+    <%= link_to "新規登録",
+        new_user_registration_path,
+        class: "signup-btn" %>
+
+  </div>
+
+</div>

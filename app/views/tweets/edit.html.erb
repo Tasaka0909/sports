@@ -1,0 +1,13 @@
+<%= form_for @tweet do |f| %>
+  <%= f.label :category, "運動の種類" %>
+  <%= f.text_field :category, :size => 140 %> 
+  <%= f.label :other, "その他" %>
+  <%= f.text_area :other, :size => "30x2" %>
+  <%= f.label :time,"運動時間" %>
+  <%= f.text_field :time, :size => 140 %> 
+  <%= f.label :time,"エネルギー" %>
+  <%= f.text_field :calorie, :size => 140 %> 
+  <%= f.label :comment,"感想・メモ" %>
+  <%= f.text_field :comment,:size => 140 %> 
+  <%= f.submit "保存する" %>
+<% end %>

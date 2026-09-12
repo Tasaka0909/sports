@@ -1,0 +1,89 @@
+<h1>マイページ</h1>
+
+<div class="user-profile">
+  <% if @user.image.attached? %>
+    <%= image_tag @user.image, size: '100x100' %>
+  <% end %>
+
+  <p>名前 : <%= @user.name %></p>
+  <p>プロフィール : <%= @user.profile %></p>
+
+  <!-- 💡 継続日数の表示エリアを追加 -->
+  <div class="streak-card">
+    <div class="streak-icon">🔥</div>
+    <div class="streak-content">
+      <span class="streak-label">継続日数</span>
+      <div class="streak-count">
+        <%= @user.streak_days %><span class="unit">日</span>
+      </div>
+    </div>
+  </div>
+
+  <% if user_signed_in? && current_user.id == @user.id %>
+    <%= link_to "プロフィールを編集する", edit_user_registration_path %>
+  <% end %>
+</div>
+
+
+<div class="calendar-area">
+  <h2>カレンダー</h2>
+
+  <%= month_calendar events: @user.tweets, attribute: :start_time do |date, tweets| %>
+    <%= date.day %>
+
+    <% tweets.each do |tweet| %>
+      <div>
+        <%= link_to tweet.category, tweet_path(tweet) %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="user-actions">
+  <%= link_to "診断する", new_perfume_path, class: "btn" %>
+  <%= link_to "新規投稿へ", new_tweet_path, class: "btn" %>
+</div>
+
+<div class="search-area">
+  <h2>投稿を検索</h2>
+
+  <%= form_tag(user_path(@user), method: :get) do %>
+    <%= text_field_tag :search, params[:search], placeholder: "キーワードで検索" %>
+    <%= submit_tag "🔍検索する" %>
+  <% end %>
+</div>
+
+
+<div class="recent-area">
+  <h2>自分の投稿一覧（最近の記録）</h2>
+
+  <div class="tweets-container">
+    <% @tweets.each do |t| %>
+      <div class="tweet">
+
+        <p class="tweet-category">
+          <%= t.category %>
+        </p>
+
+        <% if t.other.present? %>
+          <p>その他：<%= t.other %></p>
+        <% end %>
+
+        <p>時間：<%= t.time %>分</p>
+        <p>消費カロリー：<%= t.calorie %>kcal</p>
+        <p>コメント：<%= t.comment %></p>
+        <p class="tweet-date">投稿日：<%= t.created_at.strftime("%Y/%m/%d") %></p>
+
+        <div class="tweet-links">
+          <%= link_to "詳細", tweet_path(t.id) %>
+
+          <% if user_signed_in? && current_user.id == t.user_id %>
+            <%= link_to "編集する", edit_tweet_path(t.id) %>
+            <%= button_to "削除する", tweet_path(t.id), method: :delete %>
+          <% end %>
+        </div>
+
+      </div>
+    <% end %>
+  </div>
+</div>

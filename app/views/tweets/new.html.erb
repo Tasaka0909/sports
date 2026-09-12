@@ -1,0 +1,44 @@
+<h1>運動サポート</h1>
+<h3>新規運動記録</h3>
+<%= form_for @tweet do |f| %>
+
+  <div class="field">
+    <%= f.label :運動の種類 %>
+    <%= f.select :category,
+    [
+      ["ウォーキング", "ウォーキング"], 
+      ["縄跳び", "縄跳び"], 
+      ["筋トレ", "筋トレ"],
+      ["ストレッチ","ストレッチ"],
+      ["その他","その他"],
+    ],
+    include_blank: "選択して下さい" %>
+
+    <%= f.label :その他 %>
+    <%= f.text_area :other, :size => "30x2" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :運動時間 %>
+    <%= f.number_field :time, :size => 10 %> 分
+  </div>
+
+  <div class="field">
+    <%= f.label :エネルギー %>
+    <%= f.text_field :calorie, :size => "30x2" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :感想・メモ %>
+    <%= f.text_area :comment, :size => "30x2" %>
+  </div>
+
+  <div class="field"> 
+   <%= f.label :start_time, "運動した日時" %> 
+   <%= f.date_select :start_time, use_month_numbers: true%> 
+  </div>
+
+  <%= f.submit "記録する" %>
+<% end %>
+
+<%= link_to "戻る", user_path(current_user) %>

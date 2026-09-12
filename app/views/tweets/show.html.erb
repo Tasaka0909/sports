@@ -1,0 +1,29 @@
+<h1>運動サポート</h1>
+<h3>運動記録詳細</h3>
+
+<div class="tweet">
+  <p><%= @tweet.category %></p>
+  <% if @tweet.other.present? %> 
+    <p>その他：<%= @tweet.other %></p> 
+  <% end %>
+  <p><%= @tweet.time %></p>
+  <p><%= @tweet.calorie %></p>
+  <p><%= @tweet.comment %></p>
+  <p><%= @tweet.created_at %></p>
+</div>
+
+<div class="comment-wrapper">
+    <p>コメント</p>
+    <% @comments.each do |c| %>
+        <div>
+            <%= c.content %>
+        </div>
+    <% end %>
+    <%= form_with(model: [@tweet, @comment], local: true) do |f| %>
+        <%= f.text_area :content %>
+        <%= f.submit "コメントする" %>
+    <% end %>
+</div>
+
+<%= link_to "戻る", :back %>
+<%= link_to "編集する", edit_tweet_path(@tweet.id) %>

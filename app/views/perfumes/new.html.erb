@@ -1,0 +1,52 @@
+<%= form_for(@perfume, class: 'form-horizontal', role: 'form') do |f| %>
+    <div class="perfume-container">
+        <div class="col-12">
+            <p>Q1. どちらかと言うと…</p>
+        </div>
+        <div class="col-6">
+            <%= f.radio_button :question1, "1", id: "custom_id1" %>
+            <label for="custom_id1">外に出て体を動かしたい</label>
+            <%= f.radio_button :question1, "2", id: "custom_id2" %>
+            <label for="custom_id2">家の中で気軽に運動したい</label>
+        </div>
+        <div class="col-12">
+            <p>Q2. 運動するなら？</p>
+        </div> 
+        <div class="col-6">
+            <%= f.radio_button :question2, "1", id: "custom_id3" %>
+            <label for="custom_id3">ゆっくり長く続けたい</label>
+            <%= f.radio_button :question2, "2", id: "custom_id4" %>
+            <label for="custom_id4">短時間でしっかり体を動かしたい</label>
+        </div>   
+        <div class="col-12">
+            <p>Q3. どちらかというと？</p>
+        </div>
+        <div class="col-6">
+            <%= f.radio_button :question3, "1", id: "custom_id5" %>
+            <label for="custom_id5">体力に自信がない</label>
+            <%= f.radio_button :question3, "2", id: "custom_id6" %>
+            <label for="custom_id6">ある程度体力には自信がある</label>
+        </div>
+        <div class="col-12">
+            <p>Q4. 運動する目的に近いのは？</p>
+        </div>
+        <div class="col-6">
+            <%= f.radio_button :question4, "1", id: "custom_id7" %>
+            <label for="custom_id7">運動不足を解消して健康を維持したい</label>
+            <%= f.radio_button :question4, "2", id: "custom_id8" %>
+            <label for="custom_id8">体力をつけたり体を引き締めたい</label>
+        </div>
+        <div class="col-12">
+            <p>Q5. どちらなら続けられそう？</p>
+        </div>
+        <div class="col-6">
+            <%= f.radio_button :question5, "1", id: "custom_id9" %>
+            <label for="custom_id9">気分転換になる気軽な運動</label>
+            <%= f.radio_button :question5, "2", id: "custom_id10" %>
+            <label for="custom_id10">目標を決めて達成感を味わえる運動</label>
+        </div>
+    </div>
+    <div class="sindanbotan">
+        <%= f.submit " 結果 " %>
+    </div>
+<% end %>
