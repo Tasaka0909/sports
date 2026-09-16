@@ -14,13 +14,21 @@
     <p><%= f.email_field :email, autofocus: true, autocomplete: "email" %></p>
   </div>
 
-  <div class="field">
-    <p><%= f.label :パスワード %></p>
-    <% if @minimum_password_length %>
-      <p><em>最低<%= @minimum_password_length %> 文字</em></p>
+  <div class="field"> 
+  <div class="password-label-row">
+    <%= f.label :パスワード %>
+
+    <% if @minimum_password_length %> 
+      <span class="password-hint">
+        最低<%= @minimum_password_length %>文字
+      </span> 
     <% end %>
-    <p><%= f.password_field :password, autocomplete: "new-password" %></p>
   </div>
+
+  <p>
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </p> 
+</div>
 
   <div class="field">
    <p><%= f.label :パスワードを確認する %></p>

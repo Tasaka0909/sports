@@ -4513,3 +4513,192 @@ body:has(form.edit_user) .back-link {
   border: 1px solid #a9bca3;
   border-radius: 9px;
 }
+
+/* =========================================================
+   会員登録ページ：最終調整
+   ※ 新規登録ページだけに適用
+   ※ プロフィール編集ページには適用しない
+   ========================================================= */
+
+/*
+  Devise の新規登録フォームは action が必ずしも
+  "registration" や "sign_up" を含むとは限らないため、
+  password_confirmation があり、current_password がないページを
+  「新規会員登録ページ」として判定します。
+*/
+
+/* 会員登録フォーム全体 */
+body:has(input[name="user[password_confirmation]"]):not(:has(input[name="user[current_password]"]))
+form:not(.button_to) {
+  width: 760px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* 各入力項目の間隔 */
+body:has(input[name="user[password_confirmation]"]):not(:has(input[name="user[current_password]"]))
+form:not(.button_to) .field {
+  width: 100% !important;
+  margin-bottom: 24px !important;
+}
+
+/* 名前：ほかより少し大きく */
+body:has(input[name="user[password_confirmation]"]):not(:has(input[name="user[current_password]"]))
+input[name="user[name]"] {
+  display: block !important;
+  width: 100% !important;
+  height: 60px !important;
+  padding: 0 16px !important;
+  background-color: #ffffff !important;
+  border: 1px solid #cfcfcf !important;
+  border-radius: 7px !important;
+  box-sizing: border-box !important;
+  font-size: 16px !important;
+  outline: none !important;
+}
+
+/* メール・パスワード・パスワード確認：少し小さく */
+body:has(input[name="user[password_confirmation]"]):not(:has(input[name="user[current_password]"]))
+input[name="user[email]"],
+body:has(input[name="user[password_confirmation]"]):not(:has(input[name="user[current_password]"]))
+input[name="user[password]"],
+body:has(input[name="user[password_confirmation]"]):not(:has(input[name="user[current_password]"]))
+input[name="user[password_confirmation]"] {
+  display: block !important;
+  width: 100% !important;
+  height: 46px !important;
+  padding: 0 14px !important;
+  background-color: #ffffff !important;
+  border: 1px solid #cfcfcf !important;
+  border-radius: 7px !important;
+  box-sizing: border-box !important;
+  font-size: 15px !important;
+  outline: none !important;
+}
+
+/* 入力中 */
+body:has(input[name="user[password_confirmation]"]):not(:has(input[name="user[current_password]"]))
+input[name="user[name]"]:focus,
+body:has(input[name="user[password_confirmation]"]):not(:has(input[name="user[current_password]"]))
+input[name="user[email]"]:focus,
+body:has(input[name="user[password_confirmation]"]):not(:has(input[name="user[current_password]"]))
+input[name="user[password]"]:focus,
+body:has(input[name="user[password_confirmation]"]):not(:has(input[name="user[current_password]"]))
+input[name="user[password_confirmation]"]:focus {
+  border-color: #91c77f !important;
+  box-shadow: 0 0 0 3px rgba(145, 199, 127, 0.15) !important;
+}
+
+/* パスワード + 最低6文字を横並び */
+.password-label-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+}
+
+.password-label-row label {
+  display: inline-block !important;
+  width: auto !important;
+  margin: 0 !important;
+}
+
+.password-hint {
+  display: inline-block !important;
+  margin: 0 !important;
+  color: #888888 !important;
+  font-size: 14px !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+}
+
+/* 会員登録ボタン */
+body:has(input[name="user[password_confirmation]"]):not(:has(input[name="user[current_password]"]))
+.actions {
+  width: 100% !important;
+  margin-top: 28px !important;
+}
+
+/* 会員登録画面のログインリンク */
+.signup-login-link {
+  width: 100% !important;
+  margin: 14px 0 35px !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+.signup-login-link a {
+  display: inline-block !important;
+  width: auto !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  color: #1683d8 !important;
+  font-size: 16px !important;
+  text-align: center !important;
+  text-decoration: underline !important;
+}
+
+/* shared/links をそのまま使っている場合にも中央寄せ */
+body:has(input[name="user[password_confirmation]"]):not(:has(input[name="user[current_password]"]))
+form ~ div {
+  width: 760px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+
+body:has(input[name="user[password_confirmation]"]):not(:has(input[name="user[current_password]"]))
+form ~ div a {
+  display: inline-block !important;
+  width: auto !important;
+  margin: 12px auto 0 !important;
+  color: #1683d8 !important;
+  text-align: center !important;
+}
+
+/* 小さめ画面 */
+@media (max-width: 900px) {
+  body:has(input[name="user[password_confirmation]"]):not(:has(input[name="user[current_password]"]))
+  form:not(.button_to),
+  body:has(input[name="user[password_confirmation]"]):not(:has(input[name="user[current_password]"]))
+  form ~ div {
+    width: 90% !important;
+  }
+}
+
+/* =========================================================
+   会員登録ページ：各項目の間隔を少し広げる
+   ========================================================= */
+
+body:has(input[name="user[password_confirmation]"]):not(:has(input[name="user[current_password]"]))
+form:not(.button_to) .field {
+  margin-bottom: 34px !important;
+}
+
+/* =========================================================
+   会員登録：名前とメールアドレスの間隔を調整
+   ========================================================= */
+
+body:has(input[name="user[password_confirmation]"]):not(:has(input[name="user[current_password]"]))
+input[name="user[name]"] {
+  margin-bottom: 34px !important;
+}
+
+/* =========================================================
+   会員登録ページ：項目間の余白 最終調整
+   ========================================================= */
+
+/* 基本の項目間隔 */
+body:has(input[name="user[password_confirmation]"]):not(:has(input[name="user[current_password]"]))
+form:not(.button_to) .field {
+  margin-bottom: 34px !important;
+}
+
+/* 名前欄はHTML上のfieldの閉じ位置の影響を受けるため、
+   名前入力欄そのものの下にも余白を確保 */
+body:has(input[name="user[password_confirmation]"]):not(:has(input[name="user[current_password]"]))
+input[name="user[name]"] {
+  margin-bottom: 34px !important;
+}
+
