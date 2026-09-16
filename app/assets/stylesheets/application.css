@@ -23,7 +23,6 @@
 
    ========================================================= */
 
-
 /* =========================================================
    ① 全ページ共通
    ========================================================= */
@@ -57,7 +56,6 @@ a {
   transition: 0.2s;
 }
 
-
 /* =========================================================
    ② トップページ
    ========================================================= */
@@ -74,7 +72,6 @@ a {
 
   overflow: hidden;
 }
-
 
 /* =========================================================
    ③ トップページ：ヘッダー
@@ -95,7 +92,6 @@ a {
   border-bottom: 1px solid #c8d9c0;
 }
 
-
 /* FitLogロゴ */
 
 .logo {
@@ -113,7 +109,6 @@ a {
 .logo-icon {
   font-size: 28px;
 }
-
 
 /* =========================================================
    ④ トップページ：メインビジュアル
@@ -135,7 +130,6 @@ a {
       #e8f5dc 100%
     );
 }
-
 
 /* キャッチコピー */
 
@@ -169,7 +163,6 @@ a {
   color: #555555;
 }
 
-
 /* =========================================================
    雲
    ========================================================= */
@@ -188,7 +181,6 @@ a {
 
   font-size: 55px;
 }
-
 
 /* =========================================================
    木
@@ -228,7 +220,6 @@ a {
   font-size: 70px;
 }
 
-
 /* =========================================================
    走っている女性
    ========================================================= */
@@ -253,7 +244,6 @@ a {
   mix-blend-mode: multiply;
 }
 
-
 /* =========================================================
    地面
    ========================================================= */
@@ -274,7 +264,6 @@ a {
   z-index: 3;
 }
 
-
 /* =========================================================
    ⑤ トップページ：ログイン・新規登録
    ========================================================= */
@@ -292,7 +281,6 @@ a {
 
   background-color: #ffffff;
 }
-
 
 /* ボタン共通 */
 
@@ -314,7 +302,6 @@ a {
   transition: 0.2s;
 }
 
-
 /* ログイン */
 
 .login-btn {
@@ -330,7 +317,6 @@ a {
 
   transform: translateY(-2px);
 }
-
 
 /* 新規登録 */
 
@@ -348,18 +334,15 @@ a {
   transform: translateY(-2px);
 }
 
-
 /* =========================================================
    ⑥ ログインページ
    ========================================================= */
-
 
 /* ログインページ全体 */
 
 body {
   background-color: #f4f7f1;
 }
-
 
 /* ログインタイトル */
 
@@ -375,7 +358,6 @@ h2 {
 
   color: #333333;
 }
-
 
 /* ログインフォーム */
 
@@ -393,7 +375,6 @@ form {
   box-shadow: none;
 }
 
-
 /* 入力項目 */
 
 form .field {
@@ -410,7 +391,6 @@ form .field p:first-child {
   margin-bottom: 10px;
 }
 
-
 /* ラベル */
 
 form label {
@@ -419,7 +399,6 @@ form label {
 
   color: #333333;
 }
-
 
 /* =========================================================
    ログインページ：入力欄
@@ -444,7 +423,6 @@ form input[type="password"] {
   outline: none;
 }
 
-
 /* 入力中 */
 
 form input[type="email"]:focus,
@@ -454,7 +432,6 @@ form input[type="password"]:focus {
   box-shadow:
     0 0 0 3px rgba(145, 199, 127, 0.15);
 }
-
 
 /* =========================================================
    ログインしたままにする
@@ -486,7 +463,6 @@ form .remember-field label {
   font-size: 15px;
   font-weight: normal;
 }
-
 
 /* =========================================================
    ログインボタン
@@ -523,7 +499,6 @@ form input[type="submit"]:hover {
   background-color: #a5d392;
 }
 
-
 /* =========================================================
    ログインページ：Deviseリンク
    ========================================================= */
@@ -547,12 +522,10 @@ body:has(form[action*="sign_in"]) a {
   text-decoration: none;
 }
 
-
 /* 2つのリンクの間隔 */
 body:has(form[action*="sign_in"]) a + br + a {
   margin-top: 10px;
 }
-
 
 /* リンクを囲んでいる部分 */
 body:has(form[action*="sign_in"]) form + div {
@@ -563,7 +536,6 @@ body:has(form[action*="sign_in"]) form + div {
   text-align: center;
 }
 
-
 body:has(form[action*="sign_in"]) form + div a {
   width: 100%;
 
@@ -573,7 +545,6 @@ body:has(form[action*="sign_in"]) form + div a {
   text-align: center;
 }
 
-
 body:has(form[action*="sign_in"]) a:hover {
   text-decoration: underline;
 }
@@ -582,7 +553,6 @@ body:has(form[action*="sign_in"]) a:hover {
    ⑦ マイページ
    ========================================================= */
 
-
 /* マイページ全体 */
 
 body:has(.user-profile) {
@@ -590,7 +560,6 @@ body:has(.user-profile) {
 
   color: #333333;
 }
-
 
 /* =========================================================
    マイページ：ヘッダー
@@ -607,7 +576,6 @@ body:has(.user-profile) header {
   align-items: center;
   justify-content: space-between;
 }
-
 
 /* =========================================================
    マイページ：タイトル
@@ -627,7 +595,6 @@ body:has(.user-profile) > h1 {
 
   color: #243b2a;
 }
-
 
 /* =========================================================
    ⑧ マイページ：プロフィール
@@ -658,7 +625,6 @@ body:has(.user-profile) > h1 {
   position: relative;
 }
 
-
 /* プロフィール画像 */
 
 .user-profile img {
@@ -674,7 +640,6 @@ body:has(.user-profile) > h1 {
   flex-shrink: 0;
 }
 
-
 /* 名前・メール・プロフィール */
 
 .user-profile p {
@@ -686,7 +651,6 @@ body:has(.user-profile) > h1 {
 
   color: #555555;
 }
-
 
 /* 名前 */
 
@@ -709,7 +673,6 @@ body:has(input[name="user[current_password]"]) {
   background-color: #f4f7f1;
 }
 
-
 /* ---------------------------------------------------------
    「プロフィール編集」タイトル
    --------------------------------------------------------- */
@@ -726,7 +689,6 @@ body:has(input[name="user[current_password]"]) h2 {
 
   color: #2f3f2c;
 }
-
 
 /* ---------------------------------------------------------
    編集フォーム全体
@@ -750,7 +712,6 @@ form:not(.button_to) {
     0 4px 14px rgba(50, 70, 40, 0.07);
 }
 
-
 /* ---------------------------------------------------------
    各入力項目
    --------------------------------------------------------- */
@@ -761,7 +722,6 @@ form:not(.button_to) .field {
 
   margin-bottom: 28px;
 }
-
 
 /* ラベル */
 
@@ -776,7 +736,6 @@ form:not(.button_to) label {
 
   color: #344532;
 }
-
 
 /* ---------------------------------------------------------
    名前・メール・パスワード
@@ -811,7 +770,6 @@ form:not(.button_to) input[type="password"] {
   transition: 0.2s;
 }
 
-
 /* 入力中 */
 
 body:has(input[name="user[current_password]"])
@@ -829,7 +787,6 @@ form:not(.button_to) input[type="password"]:focus {
   box-shadow:
     0 0 0 3px rgba(145, 199, 127, 0.15);
 }
-
 
 /* ---------------------------------------------------------
    プロフィール文章
@@ -860,7 +817,6 @@ form:not(.button_to) textarea {
   transition: 0.2s;
 }
 
-
 body:has(input[name="user[current_password]"])
 form:not(.button_to) textarea:focus {
   border-color: #91c77f;
@@ -870,7 +826,6 @@ form:not(.button_to) textarea:focus {
   box-shadow:
     0 0 0 3px rgba(145, 199, 127, 0.15);
 }
-
 
 /* ---------------------------------------------------------
    画像選択
@@ -893,7 +848,6 @@ form:not(.button_to) input[type="file"] {
   color: #555555;
 }
 
-
 body:has(input[name="user[current_password]"])
 form:not(.button_to) input[type="file"]::file-selector-button {
   margin-right: 15px;
@@ -915,12 +869,10 @@ form:not(.button_to) input[type="file"]::file-selector-button {
   transition: 0.2s;
 }
 
-
 body:has(input[name="user[current_password]"])
 form:not(.button_to) input[type="file"]::file-selector-button:hover {
   background-color: #d9ebd1;
 }
-
 
 /* ---------------------------------------------------------
    補足文章
@@ -936,7 +888,6 @@ form:not(.button_to) em {
   font-weight: normal;
 }
 
-
 /* 最低6文字など */
 
 body:has(input[name="user[current_password]"])
@@ -950,7 +901,6 @@ form:not(.button_to) i {
   font-size: 13px;
 }
 
-
 /* ---------------------------------------------------------
    更新ボタン
    --------------------------------------------------------- */
@@ -961,7 +911,6 @@ form:not(.button_to) .actions {
 
   margin-top: 35px;
 }
-
 
 body:has(input[name="user[current_password]"])
 form:not(.button_to) input[type="submit"] {
@@ -985,14 +934,12 @@ form:not(.button_to) input[type="submit"] {
   transition: 0.2s;
 }
 
-
 body:has(input[name="user[current_password]"])
 form:not(.button_to) input[type="submit"]:hover {
   background-color: #a5d392;
 
   transform: translateY(-1px);
 }
-
 
 /* =========================================================
    アカウント削除
@@ -1012,7 +959,6 @@ form.button_to {
 
   box-shadow: none !important;
 }
-
 
 body:has(input[name="user[current_password]"])
 form.button_to button,
@@ -1040,7 +986,6 @@ form.button_to input[type="submit"] {
   cursor: pointer;
 }
 
-
 body:has(input[name="user[current_password]"])
 form.button_to button:hover,
 
@@ -1048,7 +993,6 @@ body:has(input[name="user[current_password]"])
 form.button_to input[type="submit"]:hover {
   background-color: #fff5f5 !important;
 }
-
 
 /* =========================================================
    プロフィール編集ボタン
@@ -1085,7 +1029,6 @@ form.button_to input[type="submit"]:hover {
   transform: translateY(-2px);
 }
 
-
 /* =========================================================
    ⑨ マイページ：継続日数
    ========================================================= */
@@ -1111,7 +1054,6 @@ form.button_to input[type="submit"]:hover {
     0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-
 /* 炎アイコン */
 
 .streak-icon {
@@ -1119,7 +1061,6 @@ form.button_to input[type="submit"]:hover {
 
   line-height: 1;
 }
-
 
 /* 継続日数の文字部分 */
 
@@ -1130,7 +1071,6 @@ form.button_to input[type="submit"]:hover {
 
   align-items: flex-start;
 }
-
 
 /* 「継続日数」 */
 
@@ -1144,7 +1084,6 @@ form.button_to input[type="submit"]:hover {
   color: #777777;
 }
 
-
 /* 「4日」 */
 
 .streak-count {
@@ -1157,7 +1096,6 @@ form.button_to input[type="submit"]:hover {
   line-height: 1.2;
 }
 
-
 /* 「日」 */
 
 .streak-count .unit {
@@ -1169,7 +1107,6 @@ form.button_to input[type="submit"]:hover {
 
   color: #555555;
 }
-
 
 /* =========================================================
    ⑩ マイページ：診断・新規投稿
@@ -1186,7 +1123,6 @@ form.button_to input[type="submit"]:hover {
 
   gap: 14px;
 }
-
 
 /* ボタン共通 */
 
@@ -1212,7 +1148,6 @@ form.button_to input[type="submit"]:hover {
   transition: 0.2s;
 }
 
-
 /* =========================================================
    診断する
    ========================================================= */
@@ -1237,7 +1172,6 @@ form.button_to input[type="submit"]:hover {
     0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
-
 /* =========================================================
    新規投稿
    ========================================================= */
@@ -1257,7 +1191,6 @@ form.button_to input[type="submit"]:hover {
 
   transform: translateY(-2px);
 }
-
 
 /* =========================================================
    ⑪ マイページ：検索
@@ -1280,7 +1213,6 @@ form.button_to input[type="submit"]:hover {
     0 2px 6px rgba(50, 70, 40, 0.03);
 }
 
-
 /* 検索タイトル */
 
 .search-area h2 {
@@ -1293,7 +1225,6 @@ form.button_to input[type="submit"]:hover {
   color: #344532;
 }
 
-
 /* 検索フォーム */
 
 .search-area form {
@@ -1303,7 +1234,6 @@ form.button_to input[type="submit"]:hover {
 
   gap: 10px;
 }
-
 
 /* 検索入力欄 */
 
@@ -1332,7 +1262,6 @@ form.button_to input[type="submit"]:hover {
     0 0 0 3px rgba(158, 195, 142, 0.15);
 }
 
-
 /* 検索ボタン */
 
 .search-area input[type="submit"] {
@@ -1360,7 +1289,6 @@ form.button_to input[type="submit"]:hover {
   background-color: #a6d294;
 }
 
-
 /* =========================================================
    ⑫ マイページ：カレンダー
    ========================================================= */
@@ -1382,7 +1310,6 @@ form.button_to input[type="submit"]:hover {
     0 2px 6px rgba(50, 70, 40, 0.03);
 }
 
-
 /* カレンダー見出し */
 
 .calendar-area h2 {
@@ -1395,13 +1322,11 @@ form.button_to input[type="submit"]:hover {
   color: #344532;
 }
 
-
 /* simple_calendar */
 
 .calendar-area .simple-calendar {
   width: 100%;
 }
-
 
 /* カレンダー上部 */
 
@@ -1414,7 +1339,6 @@ form.button_to input[type="submit"]:hover {
 
   justify-content: space-between;
 }
-
 
 /* 前へ・次へ */
 
@@ -1432,7 +1356,6 @@ form.button_to input[type="submit"]:hover {
   color: #79a86c;
 }
 
-
 /* カレンダーの年月 */
 
 .calendar-area .calendar-title {
@@ -1442,7 +1365,6 @@ form.button_to input[type="submit"]:hover {
 
   color: #344532;
 }
-
 
 /* =========================================================
    カレンダー本体
@@ -1455,7 +1377,6 @@ form.button_to input[type="submit"]:hover {
 
   table-layout: fixed;
 }
-
 
 /* 曜日 */
 
@@ -1472,7 +1393,6 @@ form.button_to input[type="submit"]:hover {
 
   border: 1px solid #e1e7de;
 }
-
 
 /* 日付 */
 
@@ -1494,13 +1414,11 @@ form.button_to input[type="submit"]:hover {
   transition: 0.15s;
 }
 
-
 /* カレンダーにマウスを乗せたとき */
 
 .calendar-area td:hover {
   background-color: #f8fbf6;
 }
-
 
 /* =========================================================
    今日
@@ -1509,7 +1427,6 @@ form.button_to input[type="submit"]:hover {
 .calendar-area .today {
   background-color: #f0f8eb;
 }
-
 
 /* =========================================================
    前月・次月の日付
@@ -1521,7 +1438,6 @@ form.button_to input[type="submit"]:hover {
 
   color: #bbbbbb;
 }
-
 
 /* =========================================================
    カレンダー内の運動記録
@@ -1553,7 +1469,6 @@ form.button_to input[type="submit"]:hover {
   color: #355032;
 }
 
-
 /* =========================================================
    ⑬ マイページ：最近の記録
    ========================================================= */
@@ -1563,7 +1478,6 @@ form.button_to input[type="submit"]:hover {
 
   margin: 0 auto 60px;
 }
-
 
 /* 最近の記録タイトル */
 
@@ -1577,7 +1491,6 @@ form.button_to input[type="submit"]:hover {
   color: #344532;
 }
 
-
 /* 投稿一覧 */
 
 .tweets-container {
@@ -1587,7 +1500,6 @@ form.button_to input[type="submit"]:hover {
 
   gap: 18px;
 }
-
 
 /* =========================================================
    投稿カード
@@ -1617,7 +1529,6 @@ form.button_to input[type="submit"]:hover {
     0 5px 12px rgba(50, 70, 40, 0.08);
 }
 
-
 /* 投稿内容 */
 
 .tweet p {
@@ -1629,7 +1540,6 @@ form.button_to input[type="submit"]:hover {
 
   color: #444444;
 }
-
 
 /* =========================================================
    投稿カテゴリー
@@ -1645,7 +1555,6 @@ form.button_to input[type="submit"]:hover {
   color: #45633d;
 }
 
-
 /* =========================================================
    投稿日
    ========================================================= */
@@ -1657,7 +1566,6 @@ form.button_to input[type="submit"]:hover {
 
   font-size: 12px !important;
 }
-
 
 /* =========================================================
    投稿の詳細・編集・削除
@@ -1676,7 +1584,6 @@ form.button_to input[type="submit"]:hover {
 
   border-top: 1px solid #edf0eb;
 }
-
 
 /* 詳細・編集リンク */
 
@@ -1700,7 +1607,6 @@ form.button_to input[type="submit"]:hover {
   background-color: #dfeeda;
 }
 
-
 /* =========================================================
    削除フォーム
    ========================================================= */
@@ -1718,7 +1624,6 @@ form.button_to input[type="submit"]:hover {
 
   box-shadow: none;
 }
-
 
 /* 削除ボタン */
 
@@ -1746,7 +1651,6 @@ form.button_to input[type="submit"]:hover {
   border-color: #cccccc;
 }
 
-
 /* =========================================================
    ⑭ ログアウト
    ========================================================= */
@@ -1761,7 +1665,6 @@ form.button_to input[type="submit"]:hover {
 header {
   position: relative;
 }
-
 
 /* ログアウト全体 */
 
@@ -1781,7 +1684,6 @@ header .header-list {
   z-index: 9999;
 }
 
-
 /* リストの「・」を消す */
 
 header .header-list ul {
@@ -1790,7 +1692,6 @@ header .header-list ul {
 
   list-style: none;
 }
-
 
 /* ログアウトフォーム */
 
@@ -1806,7 +1707,6 @@ header .header-list form {
 
   box-shadow: none !important;
 }
-
 
 /* ログアウトボタン */
 
@@ -1841,7 +1741,6 @@ header .header-list button:hover {
   border-color: #91a68a !important;
 }
 
-
 /* =========================================================
    ⑮ 新規運動記録ページ PC版
    ========================================================= */
@@ -1850,7 +1749,6 @@ header .header-list button:hover {
 body:has(form.new_tweet) {
   background-color: #f4f7f1;
 }
-
 
 /* =========================================================
    ページタイトル
@@ -1869,7 +1767,6 @@ body:has(form.new_tweet) h1 {
   color: #2f3f2c;
 }
 
-
 /* 「新規運動記録」 */
 body:has(form.new_tweet) h2 {
   width: 900px;
@@ -1883,7 +1780,6 @@ body:has(form.new_tweet) h2 {
 
   color: #55704f;
 }
-
 
 /* =========================================================
    フォーム全体
@@ -1905,7 +1801,6 @@ body:has(form.new_tweet) form.new_tweet {
     0 4px 14px rgba(50, 70, 40, 0.07);
 }
 
-
 /* =========================================================
    各入力項目
    ========================================================= */
@@ -1918,7 +1813,6 @@ body:has(form.new_tweet) form.new_tweet p {
   color: #333333;
 }
 
-
 /* 項目名 */
 body:has(form.new_tweet) form.new_tweet label {
   display: block;
@@ -1930,7 +1824,6 @@ body:has(form.new_tweet) form.new_tweet label {
 
   color: #344532;
 }
-
 
 /* =========================================================
    普通の入力欄
@@ -1955,7 +1848,6 @@ body:has(form.new_tweet) form.new_tweet input[type="number"] {
   transition: 0.2s;
 }
 
-
 /* 入力中 */
 body:has(form.new_tweet) form.new_tweet input[type="text"]:focus,
 body:has(form.new_tweet) form.new_tweet input[type="number"]:focus {
@@ -1966,7 +1858,6 @@ body:has(form.new_tweet) form.new_tweet input[type="number"]:focus {
   box-shadow:
     0 0 0 3px rgba(145, 199, 127, 0.15);
 }
-
 
 /* =========================================================
    セレクトボックス
@@ -1991,11 +1882,9 @@ body:has(form.new_tweet) form.new_tweet select {
   cursor: pointer;
 }
 
-
 body:has(form.new_tweet) form.new_tweet select:focus {
   border-color: #91c77f;
 }
-
 
 /* =========================================================
    テキストエリア
@@ -2022,7 +1911,6 @@ body:has(form.new_tweet) form.new_tweet textarea {
   transition: 0.2s;
 }
 
-
 body:has(form.new_tweet) form.new_tweet textarea:focus {
   background-color: #ffffff;
 
@@ -2031,7 +1919,6 @@ body:has(form.new_tweet) form.new_tweet textarea:focus {
   box-shadow:
     0 0 0 3px rgba(145, 199, 127, 0.15);
 }
-
 
 /* =========================================================
    日付
@@ -2043,7 +1930,6 @@ body:has(form.new_tweet) form.new_tweet select[id*="date"] {
 
   margin-right: 5px;
 }
-
 
 /* =========================================================
    記録するボタン
@@ -2070,7 +1956,6 @@ body:has(form.new_tweet) form.new_tweet input[type="submit"] {
   transition: 0.2s;
 }
 
-
 body:has(form.new_tweet) form.new_tweet input[type="submit"]:hover {
   background-color: #a5d392;
 
@@ -2079,9 +1964,6 @@ body:has(form.new_tweet) form.new_tweet input[type="submit"]:hover {
   box-shadow:
     0 3px 8px rgba(50, 70, 40, 0.12);
 }
-
-
-
 
 /* =========================================================
    ⑮ 戻るボタン（プロフィール編集・新規運動記録）
@@ -2137,7 +2019,6 @@ body:has(form.new_tweet) form.new_tweet + a:hover {
    ⑯ 画面サイズ調整
    ========================================================= */
 
-
 /* =========================================================
    小さめのPC画面
    ========================================================= */
@@ -2157,7 +2038,6 @@ body:has(form.new_tweet) form.new_tweet + a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 
 /* =========================================================
    さらに小さいPC
@@ -2210,7 +2090,6 @@ body:has(form.new_tweet) form.new_tweet + a:hover {
     padding: 20px;
   }
 }
-
 
 /* =========================================================
    タブレット・スマホに近いサイズ
@@ -2269,7 +2148,6 @@ body:has(form.new_tweet) form.new_tweet + a:hover {
     width: 90%;
   }
 
-
   /* -----------------------------
      ログインページ
      ----------------------------- */
@@ -2279,7 +2157,6 @@ body:has(form.new_tweet) form.new_tweet + a:hover {
 
     font-size: 28px;
   }
-
 
   /* -----------------------------
      マイページ
@@ -2314,13 +2191,11 @@ body:has(form.new_tweet) form.new_tweet + a:hover {
     text-align: center;
   }
 
-
   /* 継続日数 */
 
   .streak-card {
     min-width: 145px;
   }
-
 
   /* アクションボタン */
 
@@ -2336,7 +2211,6 @@ body:has(form.new_tweet) form.new_tweet + a:hover {
     width: 100%;
   }
 
-
   /* 検索 */
 
   .search-area {
@@ -2350,7 +2224,6 @@ body:has(form.new_tweet) form.new_tweet + a:hover {
   .search-area input[type="submit"] {
     width: 100%;
   }
-
 
   /* カレンダー */
 
@@ -2368,7 +2241,6 @@ body:has(form.new_tweet) form.new_tweet + a:hover {
     font-size: 12px;
   }
 
-
   /* 最近の記録 */
 
   .recent-area {
@@ -2378,7 +2250,6 @@ body:has(form.new_tweet) form.new_tweet + a:hover {
   .tweets-container {
     grid-template-columns: 1fr;
   }
-
 
   /* ログアウト */
 
@@ -2418,7 +2289,6 @@ body:has(form.edit_user) > a:last-child {
 
   transition: 0.2s;
 }
-
 
 /* ホバーしたとき */
 body:has(form.edit_user) > a:last-child:hover {
@@ -2464,7 +2334,6 @@ body:has(form.edit_user) > a:last-child:hover {
    診断ページ PC版
    ========================================================= */
 
-
 /* =========================================================
    ページ全体
    ========================================================= */
@@ -2472,7 +2341,6 @@ body:has(form.edit_user) > a:last-child:hover {
 body:has(input[type="radio"]) {
   background-color: #f4f7f1;
 }
-
 
 /* =========================================================
    診断タイトル
@@ -2486,7 +2354,6 @@ body:has(input[type="radio"]) {
   text-align: center;
 }
 
-
 .diagnosis-heading h1 {
   margin: 0 0 10px;
 
@@ -2498,7 +2365,6 @@ body:has(input[type="radio"]) {
   color: #2f3f2c;
 }
 
-
 .diagnosis-heading p {
   margin: 0;
 
@@ -2507,7 +2373,6 @@ body:has(input[type="radio"]) {
 
   color: #71806d;
 }
-
 
 /* =========================================================
    診断フォーム全体
@@ -2531,7 +2396,6 @@ body:has(input[type="radio"]) form {
     0 4px 16px rgba(50, 70, 40, 0.07);
 }
 
-
 /* =========================================================
    質問文
    ========================================================= */
@@ -2551,13 +2415,11 @@ body:has(input[type="radio"]) form p {
   color: #344532;
 }
 
-
 /* Q2以降の質問 */
 
 body:has(input[type="radio"]) form p:not(:first-child) {
   margin-top: 50px;
 }
-
 
 /* =========================================================
    ラジオボタン
@@ -2577,7 +2439,6 @@ body:has(input[type="radio"]) form input[type="radio"] {
 
   cursor: pointer;
 }
-
 
 /* =========================================================
    回答文字
@@ -2611,7 +2472,6 @@ body:has(input[type="radio"]) form label {
   transition: color 0.2s;
 }
 
-
 /* 回答にマウスを乗せたとき */
 
 body:has(input[type="radio"]) form label:hover {
@@ -2623,7 +2483,6 @@ body:has(input[type="radio"]) form label:hover {
 
   transform: none;
 }
-
 
 /* =========================================================
    選択肢の行
@@ -2637,7 +2496,6 @@ body:has(input[type="radio"]) form label:hover {
    の2つ目の○が毎回同じ位置になります
 */
 
-
 /* =========================================================
    改行
    ========================================================= */
@@ -2645,7 +2503,6 @@ body:has(input[type="radio"]) form label:hover {
 body:has(input[type="radio"]) form br {
   line-height: 2.2;
 }
-
 
 /* =========================================================
    結果ボタン
@@ -2674,7 +2531,6 @@ body:has(input[type="radio"]) form input[type="submit"] {
   transition: 0.2s;
 }
 
-
 body:has(input[type="radio"]) form input[type="submit"]:hover {
   background-color: #a5d392;
 
@@ -2683,7 +2539,6 @@ body:has(input[type="radio"]) form input[type="submit"]:hover {
   box-shadow:
     0 4px 10px rgba(50, 70, 40, 0.12);
 }
-
 
 /* =========================================================
    小さめのPC
@@ -2695,13 +2550,11 @@ body:has(input[type="radio"]) form input[type="submit"]:hover {
     width: 90%;
   }
 
-
   body:has(input[type="radio"]) form {
     width: 90%;
 
     padding: 45px 50px;
   }
-
 
   body:has(input[type="radio"]) form label {
     width: 300px;
@@ -2719,12 +2572,10 @@ body:has(input[type="radio"]) form p {
   margin-bottom: 24px !important;
 }
 
-
 /* 2つ目の回答のあとに余白を作る */
 body:has(input[type="radio"]) form label:nth-of-type(even) {
   margin-bottom: 55px !important;
 }
-
 
 /* 最後のQ5だけ、結果ボタンとの間を調整 */
 body:has(input[type="radio"]) form label:last-of-type {
@@ -2752,7 +2603,6 @@ body:has(input[type="radio"]) form p {
 .diagnosis-question {
   margin-bottom: 55px;
 }
-
 
 /* 最後の質問だけ余白を少し減らす */
 .diagnosis-question:last-child {
@@ -2782,7 +2632,6 @@ body:has(input[type="radio"]) form p {
   width: 100%;
 }
 
-
 /* 回答文 */
 .diagnosis-question .col-6 label {
   width: 320px;
@@ -2800,7 +2649,6 @@ body:has(input[type="radio"]) form p {
 
   color: #333333;
 }
-
 
 /* ラジオボタン */
 .diagnosis-question .col-6 input[type="radio"] {
@@ -2824,7 +2672,6 @@ body:has(input[type="radio"]) form p {
   margin: 25px auto 70px;
 }
 
-
 .sindanbotan input[type="submit"] {
   width: 100%;
   height: 58px;
@@ -2843,7 +2690,6 @@ body:has(input[type="radio"]) form p {
 
   transition: 0.2s;
 }
-
 
 .sindanbotan input[type="submit"]:hover {
   background-color: #a5d392;
@@ -2867,13 +2713,11 @@ header {
   box-shadow: 0 2px 8px rgba(50, 70, 40, 0.12);
 }
 
-
 /* FitLogの文字 */
 header h1,
 header h1 a {
   color: #ffffff !important;
 }
-
 
 /* ヘッダー内のリンク */
 header a {
@@ -2895,7 +2739,6 @@ body:has(form.edit_user) header .header-list {
 
   margin: 0 !important;
 }
-
 
 /* ログアウトボタン */
 body:has(form.edit_user) header .header-list a {
@@ -2932,7 +2775,6 @@ body:has(form.edit_user) header {
   justify-content: space-between;
 }
 
-
 /* ログアウト部分 */
 body:has(form.edit_user) header .header-list {
   position: static !important;
@@ -2962,7 +2804,6 @@ body:has(input[name="user[current_password]"]) header {
   background-color: #6f8f67 !important;
 }
 
-
 /* ログアウトを右端へ */
 body:has(input[name="user[current_password]"])
 header .header-list {
@@ -2980,7 +2821,6 @@ header .header-list {
   padding: 0 !important;
 }
 
-
 /* ログアウトのフォーム */
 body:has(input[name="user[current_password]"])
 header .header-list form {
@@ -2993,7 +2833,6 @@ header .header-list form {
   border: none !important;
   box-shadow: none !important;
 }
-
 
 /* ログアウトボタン */
 body:has(input[name="user[current_password]"])
@@ -3019,7 +2858,6 @@ header .header-list button {
 
   cursor: pointer;
 }
-
 
 /* ホバー */
 body:has(input[name="user[current_password]"])
@@ -3076,7 +2914,6 @@ body:has(form.new_tweet) form.new_tweet {
   text-align: left;
 }
 
-
 .new-tweet-heading h1 {
   margin: 0 0 10px;
 
@@ -3087,7 +2924,6 @@ body:has(form.new_tweet) form.new_tweet {
 
   color: #2f3f2c;
 }
-
 
 .new-tweet-heading p {
   margin: 0;
@@ -3122,18 +2958,15 @@ body:has(form.new_tweet) form.new_tweet {
   text-underline-offset: 8px;
 }
 
-
 /* 今までの短い線を消す */
 .hero-subtitle::after {
   content: none;
 }
 
-
 /* メインキャッチコピーを少し下にする */
 .hero-text {
   top: 105px;
 }
-
 
 /* =========================================================
    トップページ PC版：最終調整
@@ -3346,7 +3179,6 @@ body:has(form[action*="sign_in"]) form ~ a {
   text-align: center !important;
 }
 
-
 /* リンクをdivで囲んでいる場合 */
 body:has(form[action*="sign_in"]) form + div {
   width: 760px !important;
@@ -3355,7 +3187,6 @@ body:has(form[action*="sign_in"]) form + div {
 
   text-align: center !important;
 }
-
 
 body:has(form[action*="sign_in"]) form + div a {
   display: block !important;
@@ -3590,7 +3421,6 @@ h1:has(+ .user-profile) {
   margin-right: auto !important;
 }
 
-
 /* プロフィール */
 .user-profile {
   width: calc(100% - 120px) !important;
@@ -3599,7 +3429,6 @@ h1:has(+ .user-profile) {
   margin-left: auto !important;
   margin-right: auto !important;
 }
-
 
 /* カレンダー */
 .calendar-area {
@@ -3610,7 +3439,6 @@ h1:has(+ .user-profile) {
   margin-right: auto !important;
 }
 
-
 /* おすすめ運動・運動記録 */
 .user-actions {
   width: calc(100% - 120px) !important;
@@ -3619,7 +3447,6 @@ h1:has(+ .user-profile) {
   margin-left: auto !important;
   margin-right: auto !important;
 }
-
 
 /* 検索 */
 .search-area {
@@ -3630,7 +3457,6 @@ h1:has(+ .user-profile) {
   margin-right: auto !important;
 }
 
-
 /* 最近の運動記録 */
 .recent-area {
   width: calc(100% - 120px) !important;
@@ -3639,7 +3465,6 @@ h1:has(+ .user-profile) {
   margin-left: auto !important;
   margin-right: auto !important;
 }
-
 
 /* ヘッダーのFitLog・ログアウトも同じ位置に揃える */
 .header-inner {
@@ -3671,7 +3496,6 @@ h1:has(+ .user-profile) {
   border-radius: 14px !important;
 }
 
-
 /* 炎アイコン */
 .streak-icon {
   margin: 0 !important;
@@ -3681,7 +3505,6 @@ h1:has(+ .user-profile) {
 
   flex-shrink: 0;
 }
-
 
 /* 右側の文字部分 */
 .streak-content {
@@ -3693,7 +3516,6 @@ h1:has(+ .user-profile) {
   margin: 0 !important;
 }
 
-
 /* 「継続日数」 */
 .streak-label {
   margin: 0 0 4px !important;
@@ -3702,7 +3524,6 @@ h1:has(+ .user-profile) {
   line-height: 1.2;
 }
 
-
 /* 「0日」 */
 .streak-count {
   margin: 0 !important;
@@ -3710,7 +3531,6 @@ h1:has(+ .user-profile) {
   font-size: 26px !important;
   line-height: 1.1;
 }
-
 
 /* 「日」だけ少し小さく */
 .streak-count .unit {
@@ -3739,7 +3559,6 @@ h1:has(+ .user-profile) {
   color: #2f3f2c;
 }
 
-
 /* =========================================================
    編集フォーム全体
    ========================================================= */
@@ -3762,7 +3581,6 @@ body:has(.tweet-edit-title) main form {
     0 4px 14px rgba(50, 70, 40, 0.07);
 }
 
-
 /* =========================================================
    項目名
    ========================================================= */
@@ -3777,7 +3595,6 @@ body:has(.tweet-edit-title) main form label {
   font-size: 16px;
   font-weight: bold;
 }
-
 
 /* =========================================================
    入力欄 共通
@@ -3808,7 +3625,6 @@ body:has(.tweet-edit-title) main form textarea {
   transition: 0.2s;
 }
 
-
 /* 普通の入力欄 */
 body:has(.tweet-edit-title) main form input[type="text"],
 body:has(.tweet-edit-title) main form input[type="number"],
@@ -3816,14 +3632,12 @@ body:has(.tweet-edit-title) main form select {
   height: 48px;
 }
 
-
 /* 感想・メモなど */
 body:has(.tweet-edit-title) main form textarea {
   min-height: 100px;
 
   resize: vertical;
 }
-
 
 /* 入力中 */
 body:has(.tweet-edit-title) main form input:focus,
@@ -3834,7 +3648,6 @@ body:has(.tweet-edit-title) main form textarea:focus {
   box-shadow:
     0 0 0 3px rgba(143, 179, 131, 0.12);
 }
-
 
 /* =========================================================
    保存ボタン
@@ -3861,7 +3674,6 @@ body:has(.tweet-edit-title) main form input[type="submit"] {
   transition: 0.2s;
 }
 
-
 /* 保存ボタン ホバー */
 body:has(.tweet-edit-title) main form input[type="submit"]:hover {
   background-color: #a7d397;
@@ -3874,7 +3686,6 @@ body:has(.tweet-edit-title) main form input[type="submit"]:hover {
    PC版
    ========================================================= */
 
-
 /* ページ全体 */
 .tweet-edit-page {
   width: 100%;
@@ -3883,7 +3694,6 @@ body:has(.tweet-edit-title) main form input[type="submit"]:hover {
 
   box-sizing: border-box;
 }
-
 
 /* =========================================================
    タイトル
@@ -3898,7 +3708,6 @@ body:has(.tweet-edit-title) main form input[type="submit"]:hover {
   text-align: center;
 }
 
-
 .tweet-edit-heading h1 {
   margin: 0 0 10px;
 
@@ -3910,7 +3719,6 @@ body:has(.tweet-edit-title) main form input[type="submit"]:hover {
   letter-spacing: 2px;
 }
 
-
 .tweet-edit-heading p {
   margin: 0;
 
@@ -3918,7 +3726,6 @@ body:has(.tweet-edit-title) main form input[type="submit"]:hover {
 
   font-size: 15px;
 }
-
 
 /* =========================================================
    白いカード
@@ -3943,7 +3750,6 @@ body:has(.tweet-edit-title) main form input[type="submit"]:hover {
     0 4px 14px rgba(50, 70, 40, 0.07);
 }
 
-
 /* フォーム */
 .tweet-edit-card form {
   width: 100%;
@@ -3951,7 +3757,6 @@ body:has(.tweet-edit-title) main form input[type="submit"]:hover {
   margin: 0;
   padding: 0;
 }
-
 
 /* =========================================================
    各入力項目
@@ -3962,7 +3767,6 @@ body:has(.tweet-edit-title) main form input[type="submit"]:hover {
 
   margin: 0 0 25px;
 }
-
 
 /* 項目名 */
 .tweet-edit-field > label {
@@ -3975,7 +3779,6 @@ body:has(.tweet-edit-title) main form input[type="submit"]:hover {
   font-size: 16px;
   font-weight: bold;
 }
-
 
 /* =========================================================
    入力欄
@@ -4001,14 +3804,12 @@ body:has(.tweet-edit-title) main form input[type="submit"]:hover {
   transition: 0.2s;
 }
 
-
 /* input・select */
 .tweet-edit-input {
   height: 48px;
 
   padding: 0 14px;
 }
-
 
 /* textarea */
 .tweet-edit-textarea {
@@ -4019,12 +3820,10 @@ body:has(.tweet-edit-title) main form input[type="submit"]:hover {
   resize: vertical;
 }
 
-
 /* 感想欄だけ少し大きく */
 .tweet-edit-comment {
   min-height: 110px;
 }
-
 
 /* 入力欄を選択したとき */
 .tweet-edit-input:focus,
@@ -4034,7 +3833,6 @@ body:has(.tweet-edit-title) main form input[type="submit"]:hover {
   box-shadow:
     0 0 0 3px rgba(143, 179, 131, 0.13);
 }
-
 
 /* =========================================================
    「分」「kcal」がある入力欄
@@ -4050,11 +3848,9 @@ body:has(.tweet-edit-title) main form input[type="submit"]:hover {
   gap: 12px;
 }
 
-
 .tweet-edit-unit-row .tweet-edit-input {
   flex: 1;
 }
-
 
 .tweet-edit-unit-row span {
   width: 40px;
@@ -4063,7 +3859,6 @@ body:has(.tweet-edit-title) main form input[type="submit"]:hover {
 
   font-size: 15px;
 }
-
 
 /* =========================================================
    保存ボタン
@@ -4074,7 +3869,6 @@ body:has(.tweet-edit-title) main form input[type="submit"]:hover {
 
   margin-top: 35px;
 }
-
 
 .tweet-edit-submit input[type="submit"] {
   width: 100%;
@@ -4097,13 +3891,11 @@ body:has(.tweet-edit-title) main form input[type="submit"]:hover {
   transition: 0.2s;
 }
 
-
 .tweet-edit-submit input[type="submit"]:hover {
   background-color: #a7d397;
 
   transform: translateY(-1px);
 }
-
 
 /* =========================================================
    戻る
@@ -4116,7 +3908,6 @@ body:has(.tweet-edit-title) main form input[type="submit"]:hover {
   margin: 20px auto 0;
 }
 
-
 .tweet-edit-back a {
   display: inline-block;
 
@@ -4127,7 +3918,6 @@ body:has(.tweet-edit-title) main form input[type="submit"]:hover {
 
   text-decoration: none;
 }
-
 
 .tweet-edit-back a:hover {
   text-decoration: underline;
@@ -4300,7 +4090,6 @@ form.tweet-edit-form .edit-submit:hover {
   margin: 45px auto 70px;
 }
 
-
 /* =========================================================
    タイトル
    ========================================================= */
@@ -4328,7 +4117,6 @@ form.tweet-edit-form .edit-submit:hover {
   color: #71806d;
 }
 
-
 /* =========================================================
    白いフォームカード
    ========================================================= */
@@ -4349,7 +4137,6 @@ form.tweet-edit-form .edit-submit:hover {
     0 4px 14px rgba(50, 70, 40, 0.07) !important;
 }
 
-
 /* =========================================================
    各項目
    ========================================================= */
@@ -4359,7 +4146,6 @@ form.tweet-edit-form .edit-submit:hover {
 
   margin-bottom: 25px;
 }
-
 
 /* 項目名 */
 
@@ -4373,7 +4159,6 @@ form.tweet-edit-form .edit-submit:hover {
 
   color: #344532;
 }
-
 
 /* =========================================================
    入力欄
@@ -4400,7 +4185,6 @@ form.tweet-edit-form .edit-submit:hover {
 
   outline: none;
 }
-
 
 /* =========================================================
    テキストエリア
@@ -4429,7 +4213,6 @@ form.tweet-edit-form .edit-submit:hover {
   outline: none;
 }
 
-
 /* 入力中 */
 
 .tweet-edit-page .tweet-edit-field input:focus,
@@ -4442,7 +4225,6 @@ form.tweet-edit-form .edit-submit:hover {
   box-shadow:
     0 0 0 3px rgba(145, 199, 127, 0.15);
 }
-
 
 /* =========================================================
    「分」「kcal」がある入力欄
@@ -4472,7 +4254,6 @@ input[type="number"] {
 
   color: #667262;
 }
-
 
 /* =========================================================
    保存ボタン
@@ -4506,7 +4287,6 @@ input.tweet-edit-submit[type="submit"] {
 input.tweet-edit-submit[type="submit"]:hover {
   background-color: #a5d392 !important;
 }
-
 
 /* =========================================================
    マイページに戻る
@@ -4553,13 +4333,11 @@ input.tweet-edit-submit[type="submit"]:hover {
   margin: 70px auto 80px;
 }
 
-
 /* タイトル部分 */
 .tweet-edit-heading {
   width: 100%;
   margin: 0 0 30px;
 }
-
 
 /* 白いフォームの枠 */
 .tweet-edit-form {
@@ -4579,13 +4357,11 @@ input.tweet-edit-submit[type="submit"]:hover {
   box-shadow: 0 4px 14px rgba(50, 70, 40, 0.06);
 }
 
-
 /* 各入力欄 */
 .tweet-edit-field {
   width: 100%;
   margin-bottom: 28px;
 }
-
 
 /* 入力欄を横いっぱいに */
 .tweet-edit-field input,
@@ -4594,7 +4370,6 @@ input.tweet-edit-submit[type="submit"]:hover {
   width: 100%;
   box-sizing: border-box;
 }
-
 
 /* 「分」「kcal」がある部分 */
 .tweet-edit-unit {
@@ -4640,7 +4415,6 @@ body:has(form.edit_user) {
   position: relative;
 }
 
-
 /* アカウントを解約する */
 body:has(form.edit_user) .cancel-account {
   display: block;
@@ -4663,7 +4437,6 @@ body:has(form.edit_user) .cancel-account {
   border: 1px solid #dca9a5;
   border-radius: 9px;
 }
-
 
 /* 戻る */
 body:has(form.edit_user) .back-link {
@@ -4694,7 +4467,6 @@ body:has(form.edit_user) .back-link {
 body:has(form.edit_user) {
   position: relative;
 }
-
 
 /* アカウントを解約する */
 body:has(form.edit_user) .cancel-account {
