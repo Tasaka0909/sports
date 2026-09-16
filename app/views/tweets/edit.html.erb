@@ -1,13 +1,70 @@
-<%= form_for @tweet do |f| %>
-  <%= f.label :category, "運動の種類" %>
-  <%= f.text_field :category, :size => 140 %> 
-  <%= f.label :other, "その他" %>
-  <%= f.text_area :other, :size => "30x2" %>
-  <%= f.label :time,"運動時間" %>
-  <%= f.text_field :time, :size => 140 %> 
-  <%= f.label :time,"エネルギー" %>
-  <%= f.text_field :calorie, :size => 140 %> 
-  <%= f.label :comment,"感想・メモ" %>
-  <%= f.text_field :comment,:size => 140 %> 
-  <%= f.submit "保存する" %>
-<% end %>
+<div class="tweet-edit-page">
+
+  <div class="tweet-edit-heading">
+    <h1>運動記録を編集</h1>
+    <p>記録した内容を修正できます</p>
+  </div>
+
+  <%= form_for @tweet, html: { class: "tweet-edit-form" } do |f| %>
+
+    <div class="tweet-edit-field">
+      <%= f.label :category, "運動の種類" %>
+
+      <%= f.select :category,
+        [
+          ["ウォーキング", "ウォーキング"],
+          ["縄跳び", "縄跳び"],
+          ["筋トレ", "筋トレ"],
+          ["ストレッチ", "ストレッチ"],
+          ["その他", "その他"]
+        ] %>
+    </div>
+
+
+    <div class="tweet-edit-field">
+      <%= f.label :other, "その他" %>
+
+      <%= f.text_area :other,
+          placeholder: "その他の場合はこちらに入力してください" %>
+    </div>
+
+
+    <div class="tweet-edit-field">
+      <%= f.label :time, "運動時間" %>
+
+      <div class="tweet-edit-unit">
+        <%= f.number_field :time %>
+        <span>分</span>
+      </div>
+    </div>
+
+
+    <div class="tweet-edit-field">
+      <%= f.label :calorie, "消費カロリー" %>
+
+      <div class="tweet-edit-unit">
+        <%= f.number_field :calorie %>
+        <span>kcal</span>
+      </div>
+    </div>
+
+
+    <div class="tweet-edit-field">
+      <%= f.label :comment, "感想・メモ" %>
+
+      <%= f.text_area :comment,
+          placeholder: "運動についての感想を入力してください" %>
+    </div>
+
+
+    <%= f.submit "変更を保存する",
+        class: "tweet-edit-submit" %>
+
+  <% end %>
+
+
+  <%= link_to "マイページに戻る",
+      user_path(current_user),
+      class: "tweet-edit-back" %>
+
+</div>

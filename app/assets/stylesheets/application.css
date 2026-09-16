@@ -528,7 +528,7 @@ form input[type="submit"]:hover {
    ログインページ：Deviseリンク
    ========================================================= */
 
-/* Deviseリンクをログインフォームと同じ位置に揃える */
+/* 新規登録・パスワードを忘れた方はこちら */
 body:has(form[action*="sign_in"]) a {
   display: block;
 
@@ -541,33 +541,42 @@ body:has(form[action*="sign_in"]) a {
   font-size: 15px;
   line-height: 1.5;
 
-  text-align: left;
+  /* 中央揃え */
+  text-align: center;
+
   text-decoration: none;
 }
+
 
 /* 2つのリンクの間隔 */
 body:has(form[action*="sign_in"]) a + br + a {
   margin-top: 10px;
 }
 
-/* リンクをdivで囲んでいる場合 */
+
+/* リンクを囲んでいる部分 */
 body:has(form[action*="sign_in"]) form + div {
-  width: 100%;
+  width: 760px;
 
-  margin-top: 0;
+  margin: 0 auto;
 
-  text-align: left;
+  text-align: center;
 }
+
 
 body:has(form[action*="sign_in"]) form + div a {
+  width: 100%;
+
   margin-left: auto;
   margin-right: auto;
+
+  text-align: center;
 }
+
 
 body:has(form[action*="sign_in"]) a:hover {
   text-decoration: underline;
 }
-
 
 /* =========================================================
    ⑦ マイページ
@@ -608,6 +617,8 @@ body:has(.user-profile) > h1 {
   width: 1200px;
 
   margin: 45px auto 25px;
+
+  text-align: center;
 
   font-size: 32px;
   font-weight: bold;
@@ -2447,4 +2458,2286 @@ body:has(form.edit_user) > a:last-child:hover {
 .profile-back-btn:hover {
   background-color: #f0f5ed;
   border-color: #7f9b77;
+}
+
+/* =========================================================
+   診断ページ PC版
+   ========================================================= */
+
+
+/* =========================================================
+   ページ全体
+   ========================================================= */
+
+body:has(input[type="radio"]) {
+  background-color: #f4f7f1;
+}
+
+
+/* =========================================================
+   診断タイトル
+   ========================================================= */
+
+.diagnosis-heading {
+  width: 1000px;
+
+  margin: 45px auto 25px;
+
+  text-align: center;
+}
+
+
+.diagnosis-heading h1 {
+  margin: 0 0 10px;
+
+  font-size: 32px;
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  color: #2f3f2c;
+}
+
+
+.diagnosis-heading p {
+  margin: 0;
+
+  font-size: 15px;
+  font-weight: normal;
+
+  color: #71806d;
+}
+
+
+/* =========================================================
+   診断フォーム全体
+   ========================================================= */
+
+body:has(input[type="radio"]) form {
+  display: block;
+
+  width: 1000px;
+
+  margin: 35px auto 70px;
+
+  padding: 50px 65px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #dfe6da;
+  border-radius: 18px;
+
+  box-shadow:
+    0 4px 16px rgba(50, 70, 40, 0.07);
+}
+
+
+/* =========================================================
+   質問文
+   ========================================================= */
+
+body:has(input[type="radio"]) form p {
+  display: block;
+
+  width: 100%;
+
+  margin: 0 0 18px;
+
+  font-size: 19px;
+  font-weight: bold;
+
+  line-height: 1.6;
+
+  color: #344532;
+}
+
+
+/* Q2以降の質問 */
+
+body:has(input[type="radio"]) form p:not(:first-child) {
+  margin-top: 50px;
+}
+
+
+/* =========================================================
+   ラジオボタン
+   ========================================================= */
+
+body:has(input[type="radio"]) form input[type="radio"] {
+  display: inline-block;
+
+  width: 18px;
+  height: 18px;
+
+  margin: 0 10px 0 0;
+
+  vertical-align: middle;
+
+  accent-color: #91c77f;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   回答文字
+   ========================================================= */
+
+body:has(input[type="radio"]) form label {
+  display: inline-block;
+
+  width: 320px;
+
+  margin: 0;
+
+  padding: 6px 0;
+
+  vertical-align: middle;
+
+  background: transparent;
+
+  border: none;
+  border-radius: 0;
+
+  color: #333333;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  line-height: 1.5;
+
+  cursor: pointer;
+
+  transition: color 0.2s;
+}
+
+
+/* 回答にマウスを乗せたとき */
+
+body:has(input[type="radio"]) form label:hover {
+  color: #55704f;
+
+  background: transparent;
+
+  border: none;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   選択肢の行
+   ========================================================= */
+
+/*
+   1つ目のlabelを320px幅に固定しているので、
+
+   ○ 回答1                  ○ 回答2
+
+   の2つ目の○が毎回同じ位置になります
+*/
+
+
+/* =========================================================
+   改行
+   ========================================================= */
+
+body:has(input[type="radio"]) form br {
+  line-height: 2.2;
+}
+
+
+/* =========================================================
+   結果ボタン
+   ========================================================= */
+
+body:has(input[type="radio"]) form input[type="submit"] {
+  display: block;
+
+  width: 100%;
+  height: 58px;
+
+  margin-top: 40px;
+
+  background-color: #b8dfa8;
+
+  border: 1px solid #91c77f;
+  border-radius: 10px;
+
+  color: #344c30;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+body:has(input[type="radio"]) form input[type="submit"]:hover {
+  background-color: #a5d392;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 4px 10px rgba(50, 70, 40, 0.12);
+}
+
+
+/* =========================================================
+   小さめのPC
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .diagnosis-heading {
+    width: 90%;
+  }
+
+
+  body:has(input[type="radio"]) form {
+    width: 90%;
+
+    padding: 45px 50px;
+  }
+
+
+  body:has(input[type="radio"]) form label {
+    width: 300px;
+  }
+
+}
+
+/* =========================================================
+   診断ページ：質問ごとの間隔
+   ========================================================= */
+
+/* 質問文と回答の間 */
+body:has(input[type="radio"]) form p {
+  margin-top: 0 !important;
+  margin-bottom: 24px !important;
+}
+
+
+/* 2つ目の回答のあとに余白を作る */
+body:has(input[type="radio"]) form label:nth-of-type(even) {
+  margin-bottom: 55px !important;
+}
+
+
+/* 最後のQ5だけ、結果ボタンとの間を調整 */
+body:has(input[type="radio"]) form label:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+/* =========================================================
+   診断ページ：質問ごとの間隔を広げる
+   ========================================================= */
+
+/* Q2〜Q5を下にずらす */
+body:has(input[type="radio"]) form p:not(:first-of-type) {
+  margin-top: 60px !important;
+}
+
+/* 質問文と回答の間 */
+body:has(input[type="radio"]) form p {
+  margin-bottom: 22px !important;
+}
+
+/* =========================================================
+   診断ページ：質問ごとのまとまり
+   ========================================================= */
+
+.diagnosis-question {
+  margin-bottom: 55px;
+}
+
+
+/* 最後の質問だけ余白を少し減らす */
+.diagnosis-question:last-child {
+  margin-bottom: 25px;
+}
+
+/* =========================================================
+   診断ページ：質問タイトル
+   ========================================================= */
+
+.diagnosis-question .col-12 p {
+  margin: 0 0 24px !important;
+
+  font-size: 21px;
+  font-weight: 800;
+
+  color: #2f432d;
+
+  letter-spacing: 0.5px;
+}
+
+/* 回答部分 */
+.diagnosis-question .col-6 {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+}
+
+
+/* 回答文 */
+.diagnosis-question .col-6 label {
+  width: 320px;
+
+  margin: 0;
+
+  padding: 6px 0;
+
+  background: transparent;
+
+  border: none;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  color: #333333;
+}
+
+
+/* ラジオボタン */
+.diagnosis-question .col-6 input[type="radio"] {
+  width: 18px;
+  height: 18px;
+
+  margin: 0 10px 0 0;
+
+  accent-color: #91c77f;
+
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   診断結果ボタン
+   ========================================================= */
+
+.sindanbotan {
+  width: 1000px;
+
+  margin: 25px auto 70px;
+}
+
+
+.sindanbotan input[type="submit"] {
+  width: 100%;
+  height: 58px;
+
+  background-color: #b8dfa8;
+
+  border: 1px solid #91c77f;
+  border-radius: 10px;
+
+  color: #344c30;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.sindanbotan input[type="submit"]:hover {
+  background-color: #a5d392;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 4px 10px rgba(50, 70, 40, 0.12);
+}
+
+/* =========================================================
+   全ページ共通ヘッダー
+   ========================================================= */
+
+header {
+  width: 100%;
+
+  background-color: #6f8f67 !important;
+
+  padding: 20px 0;
+
+  box-shadow: 0 2px 8px rgba(50, 70, 40, 0.12);
+}
+
+
+/* FitLogの文字 */
+header h1,
+header h1 a {
+  color: #ffffff !important;
+}
+
+
+/* ヘッダー内のリンク */
+header a {
+  color: #ffffff !important;
+}
+
+/* =========================================================
+   プロフィール編集ページ：ヘッダーをマイページと統一
+   ========================================================= */
+
+/* ヘッダー内のログアウトを右上へ */
+body:has(form.edit_user) header .header-list {
+  position: absolute !important;
+
+  top: 23px !important;
+  right: 55px !important;
+
+  left: auto !important;
+
+  margin: 0 !important;
+}
+
+
+/* ログアウトボタン */
+body:has(form.edit_user) header .header-list a {
+  display: inline-block;
+
+  padding: 15px 28px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #d9e1d5;
+  border-radius: 10px;
+
+  color: #49352f !important;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  text-decoration: none;
+}
+
+/* =========================================================
+   プロフィール編集：ヘッダーをマイページと同じ配置にする
+   ========================================================= */
+
+body:has(form.edit_user) header {
+  position: relative;
+
+  width: 100%;
+
+  padding: 20px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ログアウト部分 */
+body:has(form.edit_user) header .header-list {
+  position: static !important;
+
+  width: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* =========================================================
+   プロフィール編集ページ：ヘッダー最終調整
+   ========================================================= */
+
+/* ヘッダー */
+body:has(input[name="user[current_password]"]) header {
+  position: relative !important;
+
+  width: 100% !important;
+  height: 180px;
+
+  padding: 0 60px !important;
+
+  display: flex;
+  align-items: center;
+
+  background-color: #6f8f67 !important;
+}
+
+
+/* ログアウトを右端へ */
+body:has(input[name="user[current_password]"])
+header .header-list {
+  position: absolute !important;
+
+  top: 50% !important;
+  right: 60px !important;
+  left: auto !important;
+
+  transform: translateY(-50%);
+
+  width: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+/* ログアウトのフォーム */
+body:has(input[name="user[current_password]"])
+header .header-list form {
+  width: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+/* ログアウトボタン */
+body:has(input[name="user[current_password]"])
+header .header-list input[type="submit"],
+body:has(input[name="user[current_password]"])
+header .header-list button {
+  width: auto !important;
+  height: auto !important;
+
+  margin: 0 !important;
+  padding: 15px 28px !important;
+
+  background-color: #ffffff !important;
+
+  border: 1px solid #d8e3d4 !important;
+  border-radius: 10px !important;
+
+  /* 文字を緑に変更 */
+  color: #45633d !important;
+
+  font-size: 16px !important;
+  font-weight: bold !important;
+
+  cursor: pointer;
+}
+
+
+/* ホバー */
+body:has(input[name="user[current_password]"])
+header .header-list input[type="submit"]:hover,
+body:has(input[name="user[current_password]"])
+header .header-list button:hover {
+  background-color: #eef6ea !important;
+
+  border-color: #a8c69d !important;
+
+  color: #355032 !important;
+}
+
+body:has(form.new_tweet) form.new_tweet label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  color: #344532;
+}
+
+/* =========================================================
+   新規運動記録：フォームカード
+   ========================================================= */
+
+body:has(form.new_tweet) form.new_tweet {
+  width: 900px;
+
+  margin: 0 auto 35px;
+
+  padding: 42px 50px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #dfe6da;
+  border-radius: 18px;
+
+  box-shadow:
+    0 4px 16px rgba(50, 70, 40, 0.07);
+}
+
+/* =========================================================
+   新規運動記録：ページタイトル
+   ========================================================= */
+
+.new-tweet-heading {
+  width: 900px;
+
+  margin: 55px auto 28px;
+
+  text-align: left;
+}
+
+
+.new-tweet-heading h1 {
+  margin: 0 0 10px;
+
+  font-size: 32px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  color: #2f3f2c;
+}
+
+
+.new-tweet-heading p {
+  margin: 0;
+
+  font-size: 15px;
+
+  color: #71806d;
+}
+
+/* =========================================================
+   「あなたの運動をもっと身近に」
+   ========================================================= */
+
+.hero-subtitle {
+  position: absolute;
+  top: 35px;
+  left: 8%;
+  z-index: 10;
+
+  margin: 0;
+
+  color: #6f9565;
+
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+
+  /* 文字の下線 */
+  text-decoration-line: underline;
+  text-decoration-color: #91c77f;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+}
+
+
+/* 今までの短い線を消す */
+.hero-subtitle::after {
+  content: none;
+}
+
+
+/* メインキャッチコピーを少し下にする */
+.hero-text {
+  top: 105px;
+}
+
+
+/* =========================================================
+   トップページ PC版：最終調整
+   ※ application.css の一番最後で適用
+   ========================================================= */
+
+/* トップページ全体 */
+.top-page {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* メインビジュアル */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      to bottom,
+      #fffdf8 0%,
+      #fffdf8 55%,
+      #e8f5dc 100%
+    );
+}
+
+/* 「あなたの運動をもっと身近に」 */
+.hero-subtitle {
+  position: absolute;
+  top: 35px;
+  left: 8%;
+  z-index: 10;
+  margin: 0;
+  color: #6f9565;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+/* サブキャッチコピー下のライン */
+.hero-subtitle::after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 3px;
+  margin-top: 9px;
+  background-color: #a5cf94;
+  border-radius: 10px;
+}
+
+/* 「今日も一歩、未来の自分へ！」 */
+.hero-text {
+  position: absolute;
+  top: 105px;
+  left: 8%;
+  z-index: 10;
+}
+
+.hero-text h1 {
+  margin: 0 0 20px;
+  font-size: 48px;
+  line-height: 1.4;
+  letter-spacing: 2px;
+  color: #222222;
+}
+
+.hero-text p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #555555;
+}
+
+/* 走っている女性 */
+.runner {
+  position: absolute;
+  right: 10%;
+  bottom: 25px;
+  width: 280px;
+  z-index: 5;
+}
+
+.runner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+/* 地面 */
+.ground {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #d9efc9;
+  border-radius: 50% 50% 0 0;
+  z-index: 3;
+}
+
+/* ログイン・新規登録 */
+.auth-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 35px 40px 50px;
+  background-color: #ffffff;
+}
+
+.auth-buttons a {
+  width: 260px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.login-btn {
+  background-color: #b8dfa8;
+  border: 1px solid #91c77f;
+  color: #333333;
+}
+
+.login-btn:hover {
+  background-color: #a5d392;
+  transform: translateY(-2px);
+}
+
+.signup-btn {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  color: #333333;
+}
+
+.signup-btn:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-2px);
+}
+
+/* 小さめのPC */
+@media (max-width: 900px) {
+  .hero-subtitle,
+  .hero-text {
+    left: 6%;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+  }
+
+  .runner {
+    right: 5%;
+    width: 230px;
+  }
+}
+
+/* =========================================================
+   サブキャッチコピー：下線の最終設定
+   ========================================================= */
+
+.hero-subtitle {
+  position: absolute;
+  top: 35px;
+  left: 8%;
+  z-index: 10;
+
+  margin: 0;
+
+  color: #6f9565;
+
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+
+  /* 文字全体に下線 */
+  text-decoration: underline;
+  text-decoration-color: #91c77f;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+}
+
+/* 昔の短い下線を完全に消す */
+.hero-subtitle::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* =========================================================
+   ログインページ：下のリンクを中央揃え
+   ========================================================= */
+
+body:has(form[action*="sign_in"]) form ~ a {
+  display: block !important;
+
+  width: fit-content !important;
+
+  margin: 18px auto 0 !important;
+
+  text-align: center !important;
+}
+
+
+/* リンクをdivで囲んでいる場合 */
+body:has(form[action*="sign_in"]) form + div {
+  width: 760px !important;
+
+  margin: 0 auto !important;
+
+  text-align: center !important;
+}
+
+
+body:has(form[action*="sign_in"]) form + div a {
+  display: block !important;
+
+  width: fit-content !important;
+
+  margin: 18px auto 0 !important;
+
+  text-align: center !important;
+}
+
+/* =========================================================
+   マイページ：最終レイアウト（PC版）
+   ※ここより下にマイページ用の上書きを追加しない
+   ========================================================= */
+
+/* 横幅の基準を統一 */
+.mypage-title,
+h1:has(+ .user-profile),
+.user-profile,
+.calendar-area,
+.user-actions,
+.search-area,
+.recent-area {
+  width: 1400px !important;
+  max-width: calc(100% - 120px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box;
+}
+
+/* マイページタイトル：左寄せ */
+.mypage-title,
+h1:has(+ .user-profile) {
+  margin-top: 45px !important;
+  margin-bottom: 35px !important;
+  text-align: left !important;
+  font-size: 32px !important;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #243b2a;
+}
+
+/* プロフィール */
+.user-profile {
+  min-height: 190px !important;
+  margin-top: 0 !important;
+  margin-bottom: 80px !important;
+  padding: 35px 55px !important;
+  display: grid !important;
+  grid-template-columns: 110px minmax(190px, 1fr) minmax(260px, 1.5fr) 190px 230px;
+  column-gap: 32px;
+  align-items: center !important;
+  background-color: #ffffff;
+  border: 1px solid #dfe6da;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(50, 70, 40, 0.06);
+}
+
+.user-profile > img {
+  width: 100px !important;
+  height: 100px !important;
+  margin: 0 auto !important;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #dcebd4;
+}
+
+.user-profile > p:nth-of-type(1) {
+  width: auto !important;
+  margin: 0 !important;
+  font-size: 21px !important;
+  font-weight: bold;
+  line-height: 1.6;
+  color: #2f3f2c;
+  white-space: nowrap;
+}
+
+.user-profile > p:nth-of-type(2) {
+  width: auto !important;
+  margin: 0 !important;
+  font-size: 15px !important;
+  line-height: 1.7;
+  color: #555555;
+}
+
+.user-profile .streak-card {
+  width: 190px !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+}
+
+.user-profile > a {
+  width: 230px !important;
+  height: 56px !important;
+  margin: 0 !important;
+  padding: 0 18px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  background-color: #eef6ea;
+  border: 1px solid #8fb383;
+  border-radius: 10px;
+  color: #45633d;
+  font-size: 14px !important;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* カレンダー */
+.calendar-area {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 30px !important;
+}
+
+.calendar-area .simple-calendar { font-size: 18px !important; }
+.calendar-area .calendar-heading { font-size: 24px !important; font-weight: bold; }
+.calendar-area .calendar-heading a { font-size: 18px !important; font-weight: bold; }
+.calendar-area .calendar-title { font-size: 24px !important; font-weight: bold; }
+.calendar-area .simple-calendar th { font-size: 20px !important; font-weight: bold; }
+.calendar-area .simple-calendar td { font-size: 18px !important; }
+.calendar-area .simple-calendar td a { font-size: 17px !important; }
+
+/* おすすめ運動・運動記録 */
+.user-actions {
+  margin-top: 100px !important;
+  margin-bottom: 100px !important;
+  padding: 0 !important;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  column-gap: 60px !important;
+}
+
+.user-actions a.btn {
+  width: 100% !important;
+  height: 130px !important;
+  min-height: 130px !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* 検索 */
+.search-area {
+  margin-top: 0 !important;
+  margin-bottom: 80px !important;
+}
+
+/* 最近の運動記録 */
+.recent-area {
+  margin-top: 0 !important;
+  margin-bottom: 60px !important;
+}
+
+/* ヘッダー：本文と同じ左右位置に揃える */
+header {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-inner {
+  width: 1400px !important;
+  max-width: calc(100% - 120px) !important;
+  height: 100%;
+  margin: 0 auto !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.header-inner > h1 { margin: 0 !important; }
+.header-inner .header-list {
+  position: static !important;
+  width: auto !important;
+  margin: 0 0 0 auto !important;
+  padding: 0 !important;
+  transform: none !important;
+}
+
+.header-inner .header-list ul,
+.header-inner .header-list li,
+.header-inner .header-list form {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+}
+
+/* 小さめPC */
+@media (max-width: 1300px) {
+  .mypage-title,
+  h1:has(+ .user-profile),
+  .user-profile,
+  .calendar-area,
+  .user-actions,
+  .search-area,
+  .recent-area,
+  .header-inner {
+    width: calc(100% - 80px) !important;
+    max-width: none !important;
+  }
+
+  .user-profile {
+    grid-template-columns: 100px minmax(150px, 1fr) minmax(200px, 1.3fr) 170px 200px;
+    column-gap: 20px;
+    padding: 30px 35px !important;
+  }
+
+  .user-profile .streak-card { width: 170px !important; }
+  .user-profile > a { width: 200px !important; }
+}
+
+/* =========================================================
+   マイページ：左右の余白を少なくする
+   ========================================================= */
+
+/* マイページタイトル */
+.mypage-title,
+h1:has(+ .user-profile) {
+  width: calc(100% - 120px) !important;
+  max-width: none !important;
+
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
+/* プロフィール */
+.user-profile {
+  width: calc(100% - 120px) !important;
+  max-width: none !important;
+
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
+/* カレンダー */
+.calendar-area {
+  width: calc(100% - 120px) !important;
+  max-width: none !important;
+
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
+/* おすすめ運動・運動記録 */
+.user-actions {
+  width: calc(100% - 120px) !important;
+  max-width: none !important;
+
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
+/* 検索 */
+.search-area {
+  width: calc(100% - 120px) !important;
+  max-width: none !important;
+
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
+/* 最近の運動記録 */
+.recent-area {
+  width: calc(100% - 120px) !important;
+  max-width: none !important;
+
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
+/* ヘッダーのFitLog・ログアウトも同じ位置に揃える */
+.header-inner {
+  width: calc(100% - 120px) !important;
+  max-width: none !important;
+
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* =========================================================
+   継続日数カード：バランス調整
+   ========================================================= */
+
+.streak-card {
+  width: 200px !important;
+  height: 90px !important;
+
+  padding: 0 22px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  gap: 18px !important;
+
+  box-sizing: border-box;
+
+  border-radius: 14px !important;
+}
+
+
+/* 炎アイコン */
+.streak-icon {
+  margin: 0 !important;
+
+  font-size: 32px !important;
+  line-height: 1;
+
+  flex-shrink: 0;
+}
+
+
+/* 右側の文字部分 */
+.streak-content {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  margin: 0 !important;
+}
+
+
+/* 「継続日数」 */
+.streak-label {
+  margin: 0 0 4px !important;
+
+  font-size: 13px !important;
+  line-height: 1.2;
+}
+
+
+/* 「0日」 */
+.streak-count {
+  margin: 0 !important;
+
+  font-size: 26px !important;
+  line-height: 1.1;
+}
+
+
+/* 「日」だけ少し小さく */
+.streak-count .unit {
+  margin-left: 3px;
+
+  font-size: 13px !important;
+}
+
+/* =========================================================
+   投稿編集画面：PC版
+   ========================================================= */
+
+/* ページタイトル */
+.tweet-edit-title {
+  width: 850px;
+  max-width: calc(100% - 80px);
+
+  margin: 45px auto 25px;
+
+  text-align: center;
+
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  color: #2f3f2c;
+}
+
+
+/* =========================================================
+   編集フォーム全体
+   ========================================================= */
+
+body:has(.tweet-edit-title) main form {
+  width: 850px;
+  max-width: calc(100% - 80px);
+
+  margin: 0 auto 70px;
+  padding: 40px 50px;
+
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+
+  border: 1px solid #dfe6da;
+  border-radius: 16px;
+
+  box-shadow:
+    0 4px 14px rgba(50, 70, 40, 0.07);
+}
+
+
+/* =========================================================
+   項目名
+   ========================================================= */
+
+body:has(.tweet-edit-title) main form label {
+  display: block;
+
+  margin: 0 0 8px;
+
+  color: #344532;
+
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+/* =========================================================
+   入力欄 共通
+   ========================================================= */
+
+body:has(.tweet-edit-title) main form input[type="text"],
+body:has(.tweet-edit-title) main form input[type="number"],
+body:has(.tweet-edit-title) main form select,
+body:has(.tweet-edit-title) main form textarea {
+  width: 100% !important;
+
+  margin: 0 0 25px !important;
+  padding: 12px 14px;
+
+  box-sizing: border-box;
+
+  background-color: #fafcf9;
+
+  border: 1px solid #ccd6c7;
+  border-radius: 8px;
+
+  color: #333333;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+
+/* 普通の入力欄 */
+body:has(.tweet-edit-title) main form input[type="text"],
+body:has(.tweet-edit-title) main form input[type="number"],
+body:has(.tweet-edit-title) main form select {
+  height: 48px;
+}
+
+
+/* 感想・メモなど */
+body:has(.tweet-edit-title) main form textarea {
+  min-height: 100px;
+
+  resize: vertical;
+}
+
+
+/* 入力中 */
+body:has(.tweet-edit-title) main form input:focus,
+body:has(.tweet-edit-title) main form select:focus,
+body:has(.tweet-edit-title) main form textarea:focus {
+  border-color: #8fb383;
+
+  box-shadow:
+    0 0 0 3px rgba(143, 179, 131, 0.12);
+}
+
+
+/* =========================================================
+   保存ボタン
+   ========================================================= */
+
+body:has(.tweet-edit-title) main form input[type="submit"] {
+  width: 100%;
+  height: 56px;
+
+  margin-top: 10px;
+
+  background-color: #b7dda8;
+
+  border: 1px solid #91bd82;
+  border-radius: 10px;
+
+  color: #294527;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+/* 保存ボタン ホバー */
+body:has(.tweet-edit-title) main form input[type="submit"]:hover {
+  background-color: #a7d397;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   運動記録 編集画面
+   PC版
+   ========================================================= */
+
+
+/* ページ全体 */
+.tweet-edit-page {
+  width: 100%;
+
+  padding: 45px 0 70px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   タイトル
+   ========================================================= */
+
+.tweet-edit-heading {
+  width: 800px;
+  max-width: calc(100% - 80px);
+
+  margin: 0 auto 30px;
+
+  text-align: center;
+}
+
+
+.tweet-edit-heading h1 {
+  margin: 0 0 10px;
+
+  color: #2f3f2c;
+
+  font-size: 30px;
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+
+.tweet-edit-heading p {
+  margin: 0;
+
+  color: #6d796a;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   白いカード
+   ========================================================= */
+
+.tweet-edit-card {
+  width: 800px;
+  max-width: calc(100% - 80px);
+
+  margin: 0 auto;
+
+  padding: 40px 50px;
+
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+
+  border: 1px solid #dfe6da;
+  border-radius: 16px;
+
+  box-shadow:
+    0 4px 14px rgba(50, 70, 40, 0.07);
+}
+
+
+/* フォーム */
+.tweet-edit-card form {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   各入力項目
+   ========================================================= */
+
+.tweet-edit-field {
+  width: 100%;
+
+  margin: 0 0 25px;
+}
+
+
+/* 項目名 */
+.tweet-edit-field > label {
+  display: block;
+
+  margin: 0 0 8px;
+
+  color: #344532;
+
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+/* =========================================================
+   入力欄
+   ========================================================= */
+
+.tweet-edit-input,
+.tweet-edit-textarea {
+  width: 100% !important;
+
+  box-sizing: border-box;
+
+  background-color: #fafcf9;
+
+  border: 1px solid #ccd6c7;
+  border-radius: 8px;
+
+  color: #333333;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+
+/* input・select */
+.tweet-edit-input {
+  height: 48px;
+
+  padding: 0 14px;
+}
+
+
+/* textarea */
+.tweet-edit-textarea {
+  min-height: 75px;
+
+  padding: 12px 14px;
+
+  resize: vertical;
+}
+
+
+/* 感想欄だけ少し大きく */
+.tweet-edit-comment {
+  min-height: 110px;
+}
+
+
+/* 入力欄を選択したとき */
+.tweet-edit-input:focus,
+.tweet-edit-textarea:focus {
+  border-color: #8fb383;
+
+  box-shadow:
+    0 0 0 3px rgba(143, 179, 131, 0.13);
+}
+
+
+/* =========================================================
+   「分」「kcal」がある入力欄
+   ========================================================= */
+
+.tweet-edit-unit-row {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.tweet-edit-unit-row .tweet-edit-input {
+  flex: 1;
+}
+
+
+.tweet-edit-unit-row span {
+  width: 40px;
+
+  color: #555555;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   保存ボタン
+   ========================================================= */
+
+.tweet-edit-submit {
+  width: 100%;
+
+  margin-top: 35px;
+}
+
+
+.tweet-edit-submit input[type="submit"] {
+  width: 100%;
+  height: 56px;
+
+  margin: 0 !important;
+
+  background-color: #b7dda8;
+
+  border: 1px solid #91bd82;
+  border-radius: 10px;
+
+  color: #294527;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.tweet-edit-submit input[type="submit"]:hover {
+  background-color: #a7d397;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   戻る
+   ========================================================= */
+
+.tweet-edit-back {
+  width: 800px;
+  max-width: calc(100% - 80px);
+
+  margin: 20px auto 0;
+}
+
+
+.tweet-edit-back a {
+  display: inline-block;
+
+  color: #55704f;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  text-decoration: none;
+}
+
+
+.tweet-edit-back a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   FitLog 最終整理：投稿編集ページ
+   ※ ここを編集画面の最終ルールとして使用
+   ========================================================= */
+
+/* edit.html.erb 側で .tweet-edit-page / .tweet-edit-form を付けた場合に適用 */
+.tweet-edit-page {
+  width: min(1040px, calc(100% - 80px));
+  margin: 42px auto 70px;
+}
+
+.tweet-edit-heading {
+  margin: 0 0 24px;
+  text-align: left;
+}
+
+.tweet-edit-heading h1 {
+  margin: 0 0 8px;
+  color: #2f3f2c;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.tweet-edit-heading p {
+  margin: 0;
+  color: #71806d;
+  font-size: 15px;
+}
+
+form.tweet-edit-form {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 38px 42px !important;
+  background: #ffffff !important;
+  border: 1px solid #dfe6da !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 14px rgba(50, 70, 40, 0.07) !important;
+}
+
+form.tweet-edit-form .field {
+  width: 100% !important;
+  margin: 0 0 24px !important;
+}
+
+form.tweet-edit-form label {
+  display: block !important;
+  margin: 0 0 8px !important;
+  color: #344532 !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+form.tweet-edit-form input[type="text"],
+form.tweet-edit-form input[type="number"],
+form.tweet-edit-form select,
+form.tweet-edit-form textarea {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 14px !important;
+  background: #fafcf9 !important;
+  border: 1px solid #ccd6c7 !important;
+  border-radius: 8px !important;
+  color: #333333 !important;
+  font-size: 15px !important;
+  outline: none !important;
+}
+
+form.tweet-edit-form input[type="text"],
+form.tweet-edit-form input[type="number"],
+form.tweet-edit-form select {
+  height: 50px !important;
+}
+
+form.tweet-edit-form textarea {
+  min-height: 100px !important;
+  padding: 12px 14px !important;
+  line-height: 1.6 !important;
+  resize: vertical !important;
+}
+
+form.tweet-edit-form input[type="text"]:focus,
+form.tweet-edit-form input[type="number"]:focus,
+form.tweet-edit-form select:focus,
+form.tweet-edit-form textarea:focus {
+  background: #ffffff !important;
+  border-color: #91c77f !important;
+  box-shadow: 0 0 0 3px rgba(145, 199, 127, 0.15) !important;
+}
+
+form.tweet-edit-form .edit-submit {
+  display: block !important;
+  width: 100% !important;
+  height: 56px !important;
+  margin: 8px 0 0 !important;
+  padding: 0 !important;
+  background: #b8dfa8 !important;
+  border: 1px solid #91c77f !important;
+  border-radius: 9px !important;
+  color: #344c30 !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+}
+
+form.tweet-edit-form .edit-submit:hover {
+  background: #a5d392 !important;
+}
+
+.tweet-edit-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 44px;
+  margin: 22px auto 0;
+  background: #ffffff;
+  border: 1px solid #b8cdb0;
+  border-radius: 9px;
+  color: #55704f;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.tweet-edit-back:hover {
+  background: #f0f7ed;
+  border-color: #91b486;
+}
+
+/* PC幅が少し狭い場合 */
+@media (max-width: 1100px) {
+  .tweet-edit-page {
+    width: calc(100% - 60px);
+  }
+}
+
+/* 念のため小さい画面でも崩れないようにする */
+@media (max-width: 700px) {
+  .tweet-edit-page {
+    width: calc(100% - 30px);
+    margin-top: 28px;
+  }
+
+  form.tweet-edit-form {
+    padding: 28px 22px !important;
+  }
+
+  .tweet-edit-heading h1 {
+    font-size: 27px;
+  }
+}
+
+/* =========================================================
+   投稿編集ページ PC版
+   ========================================================= */
+
+.tweet-edit-page {
+  width: 1000px;
+  max-width: calc(100% - 80px);
+
+  margin: 45px auto 70px;
+}
+
+
+/* =========================================================
+   タイトル
+   ========================================================= */
+
+.tweet-edit-heading {
+  margin-bottom: 25px;
+}
+
+.tweet-edit-heading h1 {
+  margin: 0 0 8px;
+
+  font-size: 32px;
+  font-weight: bold;
+
+  letter-spacing: 1.5px;
+
+  color: #2f3f2c;
+}
+
+.tweet-edit-heading p {
+  margin: 0;
+
+  font-size: 15px;
+
+  color: #71806d;
+}
+
+
+/* =========================================================
+   白いフォームカード
+   ========================================================= */
+
+.tweet-edit-page form.tweet-edit-form {
+  width: 100% !important;
+
+  margin: 0 !important;
+
+  padding: 40px 45px !important;
+
+  background-color: #ffffff !important;
+
+  border: 1px solid #dfe6da !important;
+  border-radius: 16px !important;
+
+  box-shadow:
+    0 4px 14px rgba(50, 70, 40, 0.07) !important;
+}
+
+
+/* =========================================================
+   各項目
+   ========================================================= */
+
+.tweet-edit-page .tweet-edit-field {
+  width: 100%;
+
+  margin-bottom: 25px;
+}
+
+
+/* 項目名 */
+
+.tweet-edit-page .tweet-edit-field label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  color: #344532;
+}
+
+
+/* =========================================================
+   入力欄
+   ========================================================= */
+
+.tweet-edit-page .tweet-edit-field input[type="text"],
+.tweet-edit-page .tweet-edit-field input[type="number"],
+.tweet-edit-page .tweet-edit-field select {
+  display: block;
+
+  width: 100% !important;
+  height: 50px;
+
+  padding: 0 14px;
+
+  background-color: #fafcf9;
+
+  border: 1px solid #ccd6c7;
+  border-radius: 8px;
+
+  font-size: 15px;
+
+  color: #333333;
+
+  outline: none;
+}
+
+
+/* =========================================================
+   テキストエリア
+   ========================================================= */
+
+.tweet-edit-page .tweet-edit-field textarea {
+  display: block;
+
+  width: 100% !important;
+  min-height: 95px;
+
+  padding: 12px 14px;
+
+  background-color: #fafcf9;
+
+  border: 1px solid #ccd6c7;
+  border-radius: 8px;
+
+  font-size: 15px;
+  line-height: 1.6;
+
+  color: #333333;
+
+  resize: vertical;
+
+  outline: none;
+}
+
+
+/* 入力中 */
+
+.tweet-edit-page .tweet-edit-field input:focus,
+.tweet-edit-page .tweet-edit-field select:focus,
+.tweet-edit-page .tweet-edit-field textarea:focus {
+  background-color: #ffffff;
+
+  border-color: #91c77f;
+
+  box-shadow:
+    0 0 0 3px rgba(145, 199, 127, 0.15);
+}
+
+
+/* =========================================================
+   「分」「kcal」がある入力欄
+   ========================================================= */
+
+.tweet-edit-unit-field {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.tweet-edit-page
+.tweet-edit-unit-field
+input[type="number"] {
+  flex: 1;
+
+  width: auto !important;
+}
+
+.tweet-edit-unit-field span {
+  min-width: 35px;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  color: #667262;
+}
+
+
+/* =========================================================
+   保存ボタン
+   ========================================================= */
+
+.tweet-edit-page
+input.tweet-edit-submit[type="submit"] {
+  display: block;
+
+  width: 100% !important;
+  height: 56px;
+
+  margin: 10px 0 0 !important;
+
+  padding: 0 !important;
+
+  background-color: #b8dfa8 !important;
+
+  border: 1px solid #91c77f !important;
+  border-radius: 9px !important;
+
+  color: #344c30 !important;
+
+  font-size: 18px !important;
+  font-weight: bold !important;
+
+  cursor: pointer;
+}
+
+.tweet-edit-page
+input.tweet-edit-submit[type="submit"]:hover {
+  background-color: #a5d392 !important;
+}
+
+
+/* =========================================================
+   マイページに戻る
+   ========================================================= */
+
+.tweet-edit-back {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 190px;
+  height: 46px;
+
+  margin: 22px auto 0;
+
+  background-color: #ffffff;
+
+  border: 1px solid #b8cdb0;
+  border-radius: 9px;
+
+  color: #55704f;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  text-decoration: none;
+}
+
+.tweet-edit-back:hover {
+  background-color: #f0f7ed;
+
+  border-color: #91b486;
+}
+
+/* =========================================================
+   運動記録 編集画面
+   左右の余白を小さくする
+   ========================================================= */
+
+.tweet-edit-page {
+  width: 90%;
+  max-width: 1500px;
+  margin: 70px auto 80px;
+}
+
+
+/* タイトル部分 */
+.tweet-edit-heading {
+  width: 100%;
+  margin: 0 0 30px;
+}
+
+
+/* 白いフォームの枠 */
+.tweet-edit-form {
+  width: 100%;
+  max-width: none;
+
+  margin: 0 auto;
+  padding: 45px 55px;
+
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+
+  border: 1px solid #dce5d8;
+  border-radius: 16px;
+
+  box-shadow: 0 4px 14px rgba(50, 70, 40, 0.06);
+}
+
+
+/* 各入力欄 */
+.tweet-edit-field {
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+
+/* 入力欄を横いっぱいに */
+.tweet-edit-field input,
+.tweet-edit-field select,
+.tweet-edit-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* 「分」「kcal」がある部分 */
+.tweet-edit-unit {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.tweet-edit-unit input {
+  flex: 1;
+  width: auto;
+}
+
+/* =========================================================
+   編集画面：タイトルを中央揃え
+   ========================================================= */
+
+.tweet-edit-heading {
+  width: 100%;
+  margin: 0 0 30px;
+  text-align: center;
+}
+
+.tweet-edit-heading h1 {
+  width: 100%;
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+.tweet-edit-heading p {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+/* =========================================================
+   プロフィール編集：解約ボタン・戻るボタン
+   ========================================================= */
+
+/* 解約ボタンと戻るボタンがあるエリア */
+body:has(form.edit_user) {
+  position: relative;
+}
+
+
+/* アカウントを解約する */
+body:has(form.edit_user) .cancel-account {
+  display: block;
+
+  width: 180px;
+  padding: 12px 10px;
+
+  margin: 42px calc((100% - 90%) / 2) 50px auto;
+
+  box-sizing: border-box;
+
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+
+  color: #b65b55;
+  background-color: #ffffff;
+
+  border: 1px solid #dca9a5;
+  border-radius: 9px;
+}
+
+
+/* 戻る */
+body:has(form.edit_user) .back-link {
+  display: block;
+
+  width: 180px;
+  padding: 12px 10px;
+
+  margin: -94px auto 50px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+
+  color: #55704f;
+  background-color: #ffffff;
+
+  border: 1px solid #a9bca3;
+  border-radius: 9px;
+}/* =========================================================
+   プロフィール編集：解約ボタン・戻るボタン
+   ========================================================= */
+
+/* 解約ボタンと戻るボタンがあるエリア */
+body:has(form.edit_user) {
+  position: relative;
+}
+
+
+/* アカウントを解約する */
+body:has(form.edit_user) .cancel-account {
+  display: block;
+
+  width: 140px;
+  padding: 9px 8px;
+
+  margin: 42px 5% 50px auto;
+
+  box-sizing: border-box;
+
+  text-align: center;
+  font-size: 12px;
+  font-weight: normal;
+  text-decoration: none;
+
+  color: #b65b55;
+  background-color: #ffffff;
+
+  border: 1px solid #dca9a5;
+  border-radius: 7px;
+}
+
+/* 戻る */
+body:has(form.edit_user) .back-link {
+  display: block;
+
+  width: 180px;
+  padding: 12px 10px;
+
+  margin: -94px auto 50px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+
+  color: #55704f;
+  background-color: #ffffff;
+
+  border: 1px solid #a9bca3;
+  border-radius: 9px;
 }

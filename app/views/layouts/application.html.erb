@@ -1,31 +1,79 @@
 <!DOCTYPE html>
 <html>
   <head>
- <title>FitLog</title>
+    <title>FitLog</title>
+
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application',
+        media: 'all',
+        'data-turbolinks-track': 'reload' %>
+
+    <%#= javascript_pack_tag 'application',
+        'data-turbolinks-track': 'reload' %>
   </head>
 
+
   <body>
-  <header>
-  <h1>FitLog</h1>
-  <div class="header-list">
-   <ul>
-    <% if user_signed_in? %>
-     <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-    <% end %>
-   </ul>
-  </div>
-  </header>
-  <main>
-    <%= yield %>
-  </main>
-   <footer>
-      <p>Copyright © GeekSalon All Rights Reserved.</p>
-   </footer>
+
+    <!-- =====================================================
+         共通ヘッダー
+         ===================================================== -->
+    <header>
+
+      <div class="header-inner">
+
+        <!-- ロゴ -->
+        <h1>FitLog</h1>
+
+
+        <!-- ヘッダー右側 -->
+        <div class="header-list">
+
+          <ul>
+
+            <% if user_signed_in? %>
+
+              <li>
+                <%= button_to 'ログアウト',
+                    destroy_user_session_path,
+                    method: :delete %>
+              </li>
+
+            <% end %>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         各ページの内容
+         ===================================================== -->
+    <main>
+
+      <%= yield %>
+
+    </main>
+
+
+    <!-- =====================================================
+         フッター
+         ===================================================== -->
+    <footer>
+
+      <p>
+        Copyright © GeekSalon All Rights Reserved.
+      </p>
+
+    </footer>
+
   </body>
 </html>

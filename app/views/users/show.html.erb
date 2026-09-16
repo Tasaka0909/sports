@@ -39,9 +39,9 @@
   <% end %>
 </div>
 
-<div class="user-actions">
-  <%= link_to "診断する", new_perfume_path, class: "btn" %>
-  <%= link_to "新規投稿へ", new_tweet_path, class: "btn" %>
+<div class="user-actions"> 
+  <%= link_to "💡 おすすめの運動を診断", new_perfume_path, class: "btn" %> 
+  <%= link_to "✏️ 運動を記録する", new_tweet_path, class: "btn" %> 
 </div>
 
 <div class="search-area">
@@ -55,7 +55,7 @@
 
 
 <div class="recent-area">
-  <h2>自分の投稿一覧（最近の記録）</h2>
+  <h2>最近の運動記録（最近の記録）</h2>
 
   <div class="tweets-container">
     <% @tweets.each do |t| %>
