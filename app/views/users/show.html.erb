@@ -72,7 +72,13 @@
         <p>時間：<%= t.time %>分</p>
         <p>消費カロリー：<%= t.calorie %>kcal</p>
         <p>コメント：<%= t.comment %></p>
-        <p class="tweet-date">投稿日：<%= t.created_at.strftime("%Y/%m/%d") %></p>
+        <p class="tweet-date">
+          投稿日：<%= t.created_at.strftime("%Y/%m/%d") %>
+        </p>
+        <p>
+         運動した日時：
+         <%= t.start_time.present? ? t.start_time.strftime("%Y/%m/%d") : "保存されていません" %>
+        </p>
 
         <div class="tweet-links">
           <%= link_to "詳細", tweet_path(t.id) %>
