@@ -2975,7 +2975,7 @@ body:has(form.new_tweet) form.new_tweet {
 
 /* トップページ全体 */
 .top-page {
-  width: 1000%;
+  width: 100%;
   min-height: 100vh;
   margin: 0;
   background-color: #ffffff;
@@ -3930,7 +3930,7 @@ body:has(.tweet-edit-title) main form input[type="submit"]:hover {
 
 /* edit.html.erb 側で .tweet-edit-page / .tweet-edit-form を付けた場合に適用 */
 .tweet-edit-page {
-  width: min(1040px, calc(100% - 80px));
+  width: unquote("min(1040px, calc(100% - 80px))");
   margin: 42px auto 70px;
 }
 
