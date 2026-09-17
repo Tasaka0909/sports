@@ -3,7 +3,7 @@
   <p>5つの質問に答えて、ぴったりの運動を見つけましょう</p>
 </div>
 
-<%= form_for(@perfume, class: 'form-horizontal', role: 'form') do |f| %>
+<%= form_for(@perfume, html: { class: 'form-horizontal' }) do |f| %>
 
   <div class="perfume-container">
 
@@ -21,7 +21,6 @@
       </div>
     </div>
 
-
     <div class="diagnosis-question">
       <div class="col-12">
         <p>Q2. 運動するなら？</p>
@@ -35,7 +34,6 @@
         <label for="custom_id4">短時間でしっかり体を動かしたい</label>
       </div>
     </div>
-
 
     <div class="diagnosis-question">
       <div class="col-12">
@@ -51,7 +49,6 @@
       </div>
     </div>
 
-
     <div class="diagnosis-question">
       <div class="col-12">
         <p>Q4. 運動する目的に近いのは？</p>
@@ -65,7 +62,6 @@
         <label for="custom_id8">体力をつけたり体を引き締めたい</label>
       </div>
     </div>
-
 
     <div class="diagnosis-question">
       <div class="col-12">
@@ -82,8 +78,9 @@
     </div>
 
   </div>
- <% end %> 
 
-<div class="sindanbotan">
- <%= submit_tag "結果", form: "diagnosis-form" %>
-</div>
+  <div class="sindanbotan">
+    <%= f.submit "診断結果を見る" %>
+  </div>
+
+<% end %>

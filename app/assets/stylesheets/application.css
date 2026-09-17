@@ -4761,3 +4761,234 @@ input[name="user[name]"] {
   font-weight: 700;
   color: #31452f;
 }
+
+/* =========================================================
+   診断結果ページ
+   ========================================================= */
+
+
+/* =========================================================
+   ① 診断結果のタイトル部分
+   ========================================================= */
+
+.intro {
+  width: 90%;
+  max-width: 850px;
+
+  margin: 55px auto 25px;
+
+  text-align: center;
+}
+
+
+/* 「診断結果」 */
+
+.intro h5 {
+  margin: 0 0 12px;
+
+  color: #31452f;
+
+  font-size: 34px;
+  font-weight: 700;
+}
+
+
+/* 「あなたにおすすめの運動は…」 */
+
+.intro p {
+  margin: 0;
+
+  color: #748071;
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   ② 診断結果の白いカード
+   ========================================================= */
+
+.exercise-container {
+  width: 90%;
+  max-width: 850px;
+
+  margin: 0 auto 25px;
+  padding: 55px 60px;
+
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+
+  border: 1px solid #dce7d8;
+  border-radius: 24px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(61, 86, 55, 0.08);
+}
+
+
+/* =========================================================
+   ③ おすすめされた運動名
+   ========================================================= */
+
+.exercise-container h6 {
+  display: inline-block;
+
+  margin: 0 0 30px;
+  padding: 16px 45px;
+
+  background-color: #eaf5e5;
+
+  border: 1px solid #d5e8cf;
+  border-radius: 50px;
+
+  color: #355c31;
+
+  font-size: 30px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   ④ おすすめ理由
+   ========================================================= */
+
+.exercise-container p {
+  max-width: 650px;
+
+  margin: 12px auto;
+
+  color: #4c574a;
+
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   ⑤ 最後のアドバイス
+   例：「まずは1日20分から始めてみよう。」
+   ========================================================= */
+
+.exercise-container p:last-of-type {
+  margin-top: 28px;
+  margin-bottom: 0;
+
+  padding: 18px 25px;
+
+  background-color: #f4f8f1;
+
+  border: 1px solid #e1ebdd;
+  border-radius: 14px;
+
+  color: #456141;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   ⑥ 白いカードの外にある戻る部分
+   ========================================================= */
+
+/* =========================================================
+   白いカードの下：マイページに戻る
+   ========================================================= */
+
+.diagnosis-back-area {
+  width: 90%;
+  max-width: 850px;
+
+  margin: 28px auto 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* =========================================================
+   ⑦ 「← マイページに戻る」ボタン
+   ========================================================= */
+
+.diagnosis-back-link {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 46px;
+
+  padding: 0 20px;
+
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+
+  border: 1px solid #c8d8c3;
+  border-radius: 10px;
+
+  color: #557050 !important;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  text-decoration: none !important;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* 戻るボタンにマウスを乗せたとき */
+
+.diagnosis-back-link:hover {
+  background-color: #f3f8f1;
+
+  border-color: #9fbd96;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 4px 10px rgba(61, 86, 55, 0.08);
+}
+
+/* =========================================================
+   診断結果を見るボタン：横幅修正
+   ========================================================= */
+
+.sindanbotan {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 35px;
+}
+
+.sindanbotan input[type="submit"] {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0;
+  padding: 20px 30px;
+
+  box-sizing: border-box;
+
+  background-color: #b4dda6;
+  border: 1px solid #91c67f;
+  border-radius: 12px;
+
+  color: #294625;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.sindanbotan input[type="submit"]:hover {
+  background-color: #a5d495
+}
