@@ -2975,7 +2975,7 @@ body:has(form.new_tweet) form.new_tweet {
 
 /* トップページ全体 */
 .top-page {
-  width: 100%;
+  width: 1000%;
   min-height: 100vh;
   margin: 0;
   background-color: #ffffff;
