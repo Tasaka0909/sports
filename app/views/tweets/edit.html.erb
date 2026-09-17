@@ -9,7 +9,6 @@
 
     <div class="tweet-edit-field">
       <%= f.label :category, "運動の種類" %>
-
       <%= f.select :category,
         [
           ["ウォーキング", "ウォーキング"],
@@ -20,48 +19,45 @@
         ] %>
     </div>
 
-
     <div class="tweet-edit-field">
       <%= f.label :other, "その他" %>
-
       <%= f.text_area :other,
-          placeholder: "その他の場合はこちらに入力してください" %>
+          placeholder: "その他を選択した場合はこちらに入力" %>
     </div>
-
 
     <div class="tweet-edit-field">
       <%= f.label :time, "運動時間" %>
 
-      <div class="tweet-edit-unit">
+      <div class="tweet-edit-unit-field">
         <%= f.number_field :time %>
         <span>分</span>
       </div>
     </div>
 
-
     <div class="tweet-edit-field">
       <%= f.label :calorie, "消費カロリー" %>
 
-      <div class="tweet-edit-unit">
+      <div class="tweet-edit-unit-field">
         <%= f.number_field :calorie %>
         <span>kcal</span>
       </div>
     </div>
 
-
     <div class="tweet-edit-field">
       <%= f.label :comment, "感想・メモ" %>
-
       <%= f.text_area :comment,
-          placeholder: "運動についての感想を入力してください" %>
+          placeholder: "今日の運動についてひとこと" %>
     </div>
 
+    <div class="tweet-edit-field">
+      <%= f.label :start_time, "運動した日" %>
+      <%= f.date_field :start_time %>
+    </div>
 
-    <%= f.submit "変更を保存する",
+    <%= f.submit "保存する",
         class: "tweet-edit-submit" %>
 
   <% end %>
-
 
   <%= link_to "マイページに戻る",
       user_path(current_user),

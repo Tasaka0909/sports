@@ -1,8 +1,8 @@
 <div class="tweet-edit-page">
 
   <div class="tweet-edit-heading">
-    <h1>運動記録を編集</h1>
-    <p>記録した内容を修正できます</p>
+    <h1>今日の運動を記録</h1>
+    <p>運動内容を入力して、毎日の頑張りを残しましょう</p>
   </div>
 
   <%= form_for @tweet, html: { class: "tweet-edit-form" } do |f| %>
@@ -16,7 +16,8 @@
           ["筋トレ", "筋トレ"],
           ["ストレッチ", "ストレッチ"],
           ["その他", "その他"]
-        ] %>
+        ],
+        include_blank: "選択してください" %>
     </div>
 
     <div class="tweet-edit-field">
@@ -49,7 +50,12 @@
           placeholder: "今日の運動についてひとこと" %>
     </div>
 
-    <%= f.submit "保存する",
+    <div class="tweet-edit-field">
+      <%= f.label :start_time, "運動した日" %>
+      <%= f.date_field :start_time %>
+    </div>
+
+    <%= f.submit "記録する",
         class: "tweet-edit-submit" %>
 
   <% end %>
